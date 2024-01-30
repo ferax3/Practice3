@@ -10,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.nav-item a{
+.nav-page{
     font-size: var(--font-size-h4);
     font-family: "Kharkiv";
     color:white;
@@ -21,14 +21,15 @@
     transition: 300ms;
     border-width: 1px;
 }
-.nav-item a:hover{
+.nav-page:hover{
+    color: white;
     border-color: red;
     transition: 300ms;
 }
-.nav-item a:active{
+.nav-page:active{
     color:var(--green_light);
 }
-.nav-item h1{
+.nav-title{
     font-size: var(--font-size-h1);
     font-family: "Wentrisor";
 }
