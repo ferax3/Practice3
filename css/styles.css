@@ -1,0 +1,30 @@
+@import url("base.css");
+@import url("reset.css");
+@import url("header.css");
+@import url("main.css");
+@import url("footer.css");
+@import url("media.css");
+body{
+    background-color: var(--black);
+}
+.green-light{
+    color: var(--green_light);
+}
+.white{
+    color:white;
+}
+.h1{
+    font-size: var(--font-size-h1);
+}
+.h2{
+    font-size: var(--font-size-h2);
+}
+.h3{
+    font-size: var(--font-size-h3);
+}
+.h4{
+    font-size: var(--font-size-h4);
+}
+.p{
+    font-size: var(--font-size-p);
+}

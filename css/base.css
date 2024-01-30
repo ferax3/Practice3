@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Wentrisor";
+    src: url("../font/Wentrisor/Wentrisor.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Kharkiv";
+    src: url("../font/Kharkiv/Kharkiv\ Tone.woff") format("woff"),
+    url("../font/Kharkiv/Kharkiv\ Tone\ 04.10.2020.ttf") format("truetype");
+}
+
+:root{
+    --red: #EB0400;
+    --green: #28A14E;
+    --green_light: #00DE46;
+    --red_dark: #732726;
+    --green_dark: #1D3D26;
+    --black: #191B19;
+    
+    --font-size-h1: 58px;
+    --font-size-h2: 38px;    
+    --font-size-h3: 24px;
+    --font-size-h4: 16px;
+    --font-size-p: 14px;
+}
