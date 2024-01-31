@@ -1,0 +1,69 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    padding: 0% 10.5%;
+}
+/* !1page */
+.welcome{
+    display: flex;
+    color: white;
+    font-family: "Kharkiv";
+    align-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-h3);
+
+}
+.welcome_h3{
+    padding: 5% 7% 2% 7%;
+    text-align: center;
+    border-style: none none solid none;
+    border-color: var(--red); 
+    border-width: 3px;
+}
+.about{
+    display: flex;
+    padding: 50px 0px 0px;
+}
+.about-left{
+    flex-direction: row;
+}
+.about-right{
+    flex-direction: row-reverse;
+}
+.about-title{
+    width: 45%;
+    color: var(--green_light);
+    font-family: "Wentrisor";
+    font-size: var(--font-size-h1);
+    display: flex;
+    align-self: center;
+}
+.about-desc{
+    width: 55%;
+    color: white;
+    font-family: "Kharkiv";
+    line-height: 1.3;
+}
+.about_h3{
+    padding: 35px 0px;
+}
+.right-to-left-text{
+    direction: rtl;
+}
+#button_about{
+    margin: 25px 0px 0px;
+    padding: 16px 30px;
+    border-style: solid;
+    border-color: var(--red); 
+    border-width: 1px;
+    border-radius: 8px;
+    transition: 500ms;
+}
+#button_about:hover{
+    background-color: var(--red_dark);
+    transition: 500ms;
+}
+#button_about:active{
+    background-color: var(--red);
+}
