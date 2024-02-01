@@ -67,3 +67,15 @@
 #button_about:active{
     background-color: var(--red);
 }
+
+/* !2page */
+.title{
+    text-align: center;
+    font-family: "Wentrisor";
+    padding: 35px 0px 20px;
+}
+.subtitle{
+    color: white;
+    font-family: "Kharkiv";
+    text-align: center;
+}
