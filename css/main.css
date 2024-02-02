@@ -154,3 +154,39 @@
 .price-main_h4{
     padding: 0px 0px 15px
 }
+
+/* !reserve.html */
+.reserve{
+    color: white;
+    font-family: "Kharkiv";
+    display: grid;
+    grid-template-columns: 4.3fr 6.7fr;
+    /* column-gap: 100px; */
+    grid-auto-columns: minmax(500px, auto);
+    line-height: 1.4;
+}
+/* .reserve img {
+    width: 100%;
+    height: auto;
+} */
+.reserve-desc{
+    padding: 0px 0px 0px 100px;
+}
+.reserve-desc-title{
+    display: grid;
+    grid-template-columns: 1fr 23fr;
+    align-items: center;
+}
+
+.reserve-desc-title_p{
+    padding: 25px 0px;
+}
+.reserve-desk_button{
+    display: flex;
+    justify-content: space-between;
+}
+.reserve_img{
+    background-image: url("../img/park-reserve.png");
+    background-size: cover;
+    background-position: center;
+}

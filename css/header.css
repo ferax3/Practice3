@@ -78,3 +78,14 @@ ul.dropdown{
     border-color: var(--red); 
     border-width: 3px;
 }
+/* !reserve.html */
+.reserve-title{
+    margin-top: 150px;
+    text-align: center;
+    font-family: "Wentrisor";
+    color: var(--green_light);
+    padding: 30px 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(25, 27, 25, 0.5)), url("../img/bg-reserve-header.png");
+    background-size: cover;
+    background-position: center;
+}
