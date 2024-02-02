@@ -5,24 +5,43 @@
 .header_nav{
     padding: 10px 160px;
     /* подумати над тим щоб при прокручуванні все працювало норм*/
-    /* position: fixed; */
+    position: fixed; 
+    width:100%;
+    background-color: var(--black);
+
 }
 .nav-list{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+.nav-li{ /* */
+    display: inline-block;
+    position: relative;
+}
 .nav-page{
     font-size: var(--font-size-h4);
     font-family: "Kharkiv";
     color:white;
     padding: 10px 15px;
+    display: block; /* */
     border-style: solid;
     border-color: var(--black);
     border-radius: 8px;
     transition: 300ms;
     border-width: 1px;
 }
+ul.dropdown li{
+    display: block;
+}
+ul.dropdown{
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+
 .nav-page:hover{
     color: white;
     border-color: var(--red);

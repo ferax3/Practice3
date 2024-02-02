@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: 0% 10.5%;
+    margin-top: 150px;
 }
 /* !1page */
 .welcome{
@@ -102,4 +103,54 @@
 .example{
     margin-top: -50px;
     display: none;
+}
+
+/* !to-do */
+
+.doing{
+    color: white;
+    font-family: "Kharkiv";
+}
+.doing-main-title{
+    text-align: center;
+}
+.doing-main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+}
+.doing-one{
+    padding: 40px 0px;
+    display: grid;
+    grid-template-rows: 3fr 7fr;
+    row-gap: 10px;
+}
+.doing-title{
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    column-gap: 30px;
+    align-items: center;
+}
+.doing-p{
+    line-height: 1.4;
+}
+.price{
+    margin: 40px 0px;
+    padding: 40px 0px 10px;
+    border-style: solid none solid;
+    border-color: var(--red); 
+    border-width: 3px;
+}
+.price-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    grid-auto-rows: minmax(50px, auto);
+}
+.attention{
+    padding: 25px 0px 10px;
+    color: var(--red);
+}
+.price-main_h4{
+    padding: 0px 0px 15px
 }
