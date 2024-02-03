@@ -8,7 +8,7 @@
     position: fixed; 
     width:100%;
     background-color: var(--black);
-
+    z-index: 999;
 }
 .nav-list{
     display: flex;
@@ -86,6 +86,16 @@ ul.dropdown{
     color: var(--green_light);
     padding: 30px 0px;
     background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(25, 27, 25, 0.5)), url("../img/bg-reserve-header.png");
+    background-size: cover;
+    background-position: center;
+}
+.map-title{
+    margin-top: 150px;
+    text-align: center;
+    font-family: "Wentrisor";
+    color: var(--green_light);
+    padding: 30px 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(25, 27, 25, 0.5)), url("../img/mountain-bg-header-map.png");
     background-size: cover;
     background-position: center;
 }
