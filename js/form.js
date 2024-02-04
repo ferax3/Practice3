@@ -66,11 +66,13 @@ document.addEventListener('DOMContentLoaded', function () {
     var datePicker = document.getElementById('datePicker');
     var formTime = document.querySelector('#form-time');
     var selectTime = document.getElementsByName('select_time')[0]; // Зміна тут
+    var listDragons = document.getElementById('list-dragons');
 
     // Ховаємо блоки при завантаженні сторінки
     dragonSelect.style.display = 'none';
     dateVisit.style.display = 'none';
     formTime.style.display = 'none';
+    listDragons.style.display = 'none';
 
     // Додаємо слухач події до елемента activity
     activitySelect.addEventListener('change', function () {
@@ -78,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (activitySelect.value === "Спостереження за драконами") {
             // Якщо так, показуємо блок select_dragon і ховаємо блок date_visit і formTime
             dragonSelect.style.display = 'block';
+            listDragons.style.display = 'block';
             dateVisit.style.display = 'none';
             datePicker.value='';
             formTime.style.display = 'none';
@@ -86,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Якщо ні, ховаємо блок select_dragon і показуємо блок date_visit
             dragonSelect.style.display = 'none';
             dragonSelect.value='';
+            listDragons.style.display = 'none';
             dateVisit.style.display = 'block';
             formTime.style.display = 'none';
             selectTime.value='';
@@ -144,4 +148,14 @@ function calculateTotal() {
     // Розрахунок загальної вартості та оновлення елементу
     var totalCost = countTickets * cost;
     document.getElementById('result-form-h3').innerText = totalCost;
+}
+function openPopup() {
+    // event.preventDefault(); // Заборона стандартної дії кнопки
+    var popup = document.getElementById("popup");
+    popup.style.display = "flex";
+}
+
+function closePopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
 }
