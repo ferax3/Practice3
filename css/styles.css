@@ -27,4 +27,5 @@ body{
 }
 .p{
     font-size: var(--font-size-p);
+    line-height: 1.4
 }
