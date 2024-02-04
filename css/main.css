@@ -70,7 +70,7 @@
     background-color: var(--red);
 }
 
-/* !2page */
+/* !2page (dragons.html)*/
 .title{
     text-align: center;
     font-family: "Wentrisor";
@@ -81,6 +81,57 @@
     font-family: "Kharkiv";
     text-align: center;
 }
+.gallery-dragons{
+    display: flex;
+    flex-direction: column;
+    gap: 0px 5px;
+    color: white;
+    font-family: "Kharkiv";
+}
+.gallery-dragons-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+.gallery-one{
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0px;
+}
+
+
+
+.Norwegian_ridgeback{
+    background-image: url("../img/дракони/норвезький.png");
+    background-size: cover;
+}
+
+.gallery-photo{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-gallery{
+    display: none;
+}
+.gallery-photo:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/норвезький.png");
+}
+.gallery-photo:hover .button-gallery{
+    display: block !important;
+}
+
 /* !3page */
 .dragon-img{
     height: 600px;
