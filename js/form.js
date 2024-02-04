@@ -42,41 +42,6 @@ function restrictDays() {
     }
 }
 
-
-// function restrictDays() {
-//     var datePicker = document.getElementById('datePicker');
-//     var selectedDate = new Date(datePicker.value);
-//     var today = new Date(); // Сьогоднішня дата
-//     var maxDate = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate()); // Дата через місяць вперед
-
-//     // Перевірка, чи вибрана дата не раніш або рівна сьогоднішній даті
-//     if (selectedDate <= today) {
-//         alert('Будь ласка, оберіть дату, яка є майбутньою.');
-//         datePicker.value = ''; // Очистити поле введення, якщо вибрана дата не є майбутньою
-//     } else if (selectedDate > maxDate) {
-//         alert('Будь ласка, оберіть дату, яка не перевищує межу за місяць вперед.');
-//         datePicker.value = ''; // Очистити поле введення, якщо вибрана дата перевищує межу за місяць вперед
-//     } else if (selectedDate.getDay() !== 5 && selectedDate.getDay() !== 6) {
-//         alert('Будь ласка, виберіть п\'ятницю або суботу.');
-//         datePicker.value = ''; // Очистити поле введення, якщо вибраний день не є п'ятницею або суботою
-//     }
-// }
-function formatTime(value) {
-    // Розбити значення на години та хвилини
-    var parts = value.split(":");
-    var hours = parts[0];
-    var minutes = parts[1];
-
-    // Забезпечити, що хвилини завжди відображаються як 00
-    minutes = "00";
-
-    // Скласти години та хвилини назад
-    var formattedTime = hours + ":" + minutes;
-
-    // Присвоїти отформатований час назад у поле вводу
-    document.getElementsByName("time_visit")[0].value = formattedTime;
-}
-
 document.addEventListener('DOMContentLoaded', function () {
     const inputFields = document.querySelectorAll('.input-field');
     const errorMessages = document.querySelectorAll('.error-message');
@@ -97,8 +62,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Отримуємо посилання на елементи
     var activitySelect = document.querySelector('select[name="activity"]');
     var dragonSelect = document.querySelector('select[name="select_dragon"]');
-    var dateVisit = document.querySelector('#form-date');
+    var dateVisit = document.querySelector('#form-date'); //!form-date
+    var datePicker = document.getElementById('datePicker');
     var formTime = document.querySelector('#form-time');
+    var selectTime = document.getElementsByName('select_time')[0]; // Зміна тут
 
     // Ховаємо блоки при завантаженні сторінки
     dragonSelect.style.display = 'none';
@@ -112,24 +79,29 @@ document.addEventListener('DOMContentLoaded', function () {
             // Якщо так, показуємо блок select_dragon і ховаємо блок date_visit і formTime
             dragonSelect.style.display = 'block';
             dateVisit.style.display = 'none';
+            datePicker.value='';
             formTime.style.display = 'none';
+            selectTime.value='';
         } else {
             // Якщо ні, ховаємо блок select_dragon і показуємо блок date_visit
             dragonSelect.style.display = 'none';
+            dragonSelect.value='';
             dateVisit.style.display = 'block';
             formTime.style.display = 'none';
+            selectTime.value='';
         }
     });
 
     // Додаємо слухач події до елемента dateVisit
     dateVisit.addEventListener('change', function () {
         // Перевіряємо, чи введено значення в поле dateVisit
-        if (dateVisit.value !== "") {
+        if (dateVisit.value !== "" && (activitySelect.value === "Спостереження за драконами" || activitySelect.value === "Підйом на гору")) {
             // Якщо так, показуємо блок formTime
             formTime.style.display = 'block';
         } else {
             // Якщо ні, ховаємо блок formTime
             formTime.style.display = 'none';
+            selectTime.value='';
         }
     });
     // Додаємо слухач події до елемента dragonSelect
@@ -141,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             // Якщо ні, ховаємо блок form-date
             dateVisit.style.display = 'none';
+            dateVisit.value='';
         }
     });
 });
