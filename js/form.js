@@ -117,3 +117,31 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+function calculateTotal() {
+    // Отримання значень полів
+    var countTickets = parseInt(document.getElementsByName("count_tickets")[0].value);
+    var activity = document.getElementsByName("activity")[0].value;
+
+    // Визначення вартості на основі вибраних опцій
+    var cost = 0;
+    switch (activity) {
+        case 'Вхід до інкубатора':
+            cost = 100;
+            break;
+        case 'Підйом на гору':
+            cost = 150;
+            break;
+        case 'Політ на драконі':
+            cost = 300;
+            break;
+        case 'Спостереження за драконами':
+            cost = 250;
+            break;
+        default:
+            cost = 0;
+    }
+
+    // Розрахунок загальної вартості та оновлення елементу
+    var totalCost = countTickets * cost;
+    document.getElementById('result-form-h3').innerText = totalCost;
+}

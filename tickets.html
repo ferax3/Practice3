@@ -43,9 +43,9 @@
             <h3 class="h3 form-title">Інформація про відвідування</h3>
             <div class="form-row p">
                 <label for="">Кількість квитків: 
-                    <input type="number" name="count_tickets" min="1" max="30" value="1" class="form-number">
+                    <input type="number" name="count_tickets" min="1" max="30" value="1" class="form-number" onchange="calculateTotal()">
                 </label>
-                <select name="activity" class="select form-item form-item-all input-field">
+                <select name="activity" class="select form-item form-item-all input-field" onchange="calculateTotal()">
                     <option value="" disabled selected>Оберіть активність</option>
                     <option>Вхід до інкубатора</option>
                     <option>Підйом на гору</option>
@@ -66,7 +66,6 @@
                 </select>
             </div>
             <div class="form-row p">
-
                 <label id ="form-date"> Оберіть дату візиту:
                     <input type="date" name="date_visit" class="form-item input-field" id="datePicker" onchange="restrictDays()"> 
                 </label>
@@ -78,19 +77,24 @@
                         <option>15:00</option>
                     </select>
                 </label>
-
-
-                <!-- !JS -->
-
-
             </div>
             <div class="result-form green-light">
                 <h3 class="h3">Всього:</h3>
-                <h3 class="h3">0 у.о.</h3>
+                <h3 class="h3" id="result-form-h3">0</h3>
+                <h3 class="h3">y.o.</h3>
             </div>
             <!-- !submit add -->
-            <button id="button" type="submit" class="button button-form-tickets">Забронювати квитки</button>
+            <button id="button" class="button button-form-tickets" onclick="openPopup()">Забронювати квитки</button>
         </form>
+        <button id="button" class="button button-form-tickets" onclick="openPopup()">Забронювати квитки</button>
+        <div class="container-popup" id="popup">
+            <div class="container-popup-icon_close">
+                <img src="img/icon/icon-close.png" alt="">
+            </div>
+            <h2 class="h2">Квитки заброньовано!</h2>
+            <p class="p">Дякуємо Вам за оформлення квитків. Підтвердження броні прийде Вам на пошту протягом кількох хвилин. Будь ласка, здійсніть оплату протягом 24-х годин, після чого ви отримаєте квитки на Вашу пошту.</p>
+            <button class="button p">Оплатити зараз</button>
+        </div>
         <p class="p ticket-end-p">Після натиснення кнопки “Забронювати квитки” Ви отримаєте підтвердження бронювання на вказану пошту. Опісля Ви можете оплатити квитки одразу або протягом 24-х годин після підтвердження броні (за посиланням у листі з підтвердженням). Коли оплата пройде успішно, електронний лист з квитками прийде на Вашу пошту.</p>
     </main>
     <footer class="footer">
