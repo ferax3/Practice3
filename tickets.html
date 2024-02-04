@@ -6,6 +6,8 @@
     <!--need to change title-->
     <!--ALT+Z - word wrap-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/form.js"></script>
+
     <title>Dragons</title>
 </head>
 <body>
@@ -48,7 +50,7 @@
                     <option>Вхід до інкубатора<br> та малят-драконів</option>
                     <option>Підйом на гору</option>
                     <option>Політ на драконі</option>
-                    <option>Відвідування одного місця з драконами</option>
+                    <option>Спостереження за драконами</option>
                 </select>
                 <select name="select_dragon" class="select form-item form-item-all input-field">
                     <option value="" disabled selected>Оберіть дракона</option>
@@ -64,14 +66,15 @@
                 </select>
             </div>
             <div class="form-row p">
-                <label> Оберіть дату візиту:
+
+                <label id ="form-date"> Оберіть дату візиту:
                     <input type="date" name="date_visit" class="form-item input-field" id="datePicker" onchange="restrictDays()"> 
                 </label>
 
-                <label for="">Оберіть час візиту:
+                <label id="form-time">Оберіть час візиту:
                     <select name="select_time" class="select form-item form-time input-field">
                         <option value="" disabled selected>00:00</option>
-                        <option>09:00</option>
+                        <option>10:00</option>
                         <option>15:00</option>
                     </select>
                 </label>
@@ -80,60 +83,6 @@
                 </label> -->
 
                 <!-- !JS -->
-                <script>
-                    function restrictDays() {
-                        var datePicker = document.getElementById('datePicker');
-                        var selectedDate = new Date(datePicker.value);
-                        var today = new Date(); // Сьогоднішня дата
-                        var maxDate = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate()); // Дата через місяць вперед
-
-                        // Перевірка, чи вибрана дата не раніш або рівна сьогоднішній даті
-                        if (selectedDate <= today) {
-                            alert('Будь ласка, оберіть дату, яка є майбутньою.');
-                            datePicker.value = ''; // Очистити поле введення, якщо вибрана дата не є майбутньою
-                        } else if (selectedDate > maxDate) {
-                            alert('Будь ласка, оберіть дату, яка не перевищує межу за місяць вперед.');
-                            datePicker.value = ''; // Очистити поле введення, якщо вибрана дата перевищує межу за місяць вперед
-                        } else if (selectedDate.getDay() !== 5 && selectedDate.getDay() !== 6) {
-                            alert('Будь ласка, виберіть п\'ятницю або суботу.');
-                            datePicker.value = ''; // Очистити поле введення, якщо вибраний день не є п'ятницею або суботою
-                        }
-                    }
-                    function formatTime(value) {
-                        // Розбити значення на години та хвилини
-                        var parts = value.split(":");
-                        var hours = parts[0];
-                        var minutes = parts[1];
-
-                        // Забезпечити, що хвилини завжди відображаються як 00
-                        minutes = "00";
-
-                        // Скласти години та хвилини назад
-                        var formattedTime = hours + ":" + minutes;
-
-                        // Присвоїти отформатований час назад у поле вводу
-                        document.getElementsByName("time_visit")[0].value = formattedTime;
-                    }
-
-                    document.addEventListener('DOMContentLoaded', function () {
-                        const inputFields = document.querySelectorAll('.input-field');
-                        const errorMessages = document.querySelectorAll('.error-message');
-                        inputFields.forEach((input, index) => {
-                            input.addEventListener('input', function () {
-                                if (input.value.trim() !== '') {
-                                    input.style.borderColor = 'var(--green_light)';
-                                    errorMessages[index].textContent = '';
-                                } else {
-                                    input.style.borderColor = 'var(--red)';
-                                    errorMessages[index].textContent = 'Заповніть це поле!';
-                                }
-                            });
-                        });
-                    });
-
-
-                </script>
-
 
 
             </div>

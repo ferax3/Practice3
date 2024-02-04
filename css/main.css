@@ -292,4 +292,5 @@
 
 .error-message {
     color: var(--red);
+    font-size: 10px;
 }
