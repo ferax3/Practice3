@@ -5,7 +5,7 @@
 .header_nav{
     padding: 10px 160px;
     /* подумати над тим щоб при прокручуванні все працювало норм*/
-    position: fixed; 
+    position: relative; 
     width:100%;
     background-color: var(--black);
     z-index: 999;
@@ -99,3 +99,5 @@ ul.dropdown{
     background-size: cover;
     background-position: center;
 }
+
+

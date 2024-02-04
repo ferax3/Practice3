@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: 0% 10.5%;
-    margin-top: 150px;
+    /* margin-top: 150px; */
 }
 /* !1page */
 .welcome{
@@ -52,7 +52,7 @@
 .right-to-left-text{
     direction: rtl;
 }
-#button{
+.button{
     margin: 25px 0px 0px;
     padding: 16px 30px;
     border-style: solid;
@@ -62,11 +62,11 @@
     transition: 500ms;
     font-size: var(--font-size-h4);
 }
-#button:hover{
+.button:hover{
     background-color: var(--red_dark);
     transition: 500ms;
 }
-#button:active{
+.button:active{
     background-color: var(--red);
 }
 
@@ -121,8 +121,6 @@
       opacity: 1;
     }
 }
-  
-
 
 .doing{
     color: white;
@@ -229,3 +227,69 @@
 }
 
 /* !tickets.html */
+.ticket{
+    font-family: "Kharkiv";
+}
+.ticket-start{
+    text-align: center;
+    color: white;
+    padding-top: 25px;
+}
+.ticket-start_h3{
+    padding: 40px 120px;
+}
+.form{
+    color: white;
+    border-style: solid none solid;
+    border-color: var(--red); 
+    border-width: 3px;
+}
+.form-title{
+    padding: 30px 0px;
+}
+.form-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    padding-bottom: 45px;
+}
+.form-item{
+    border-style: none none solid;
+    border-color: var(--red); 
+    border-width: 3px;
+    padding-bottom: 5px;
+}
+.form-number{
+    border-style: solid;
+    border-color: var(--green_light); 
+    border-width: 3px;
+    padding: 7px;
+}
+.form-item-all{
+    width: 85%;
+}
+.form-item::placeholder{
+    color:white;
+}
+.select option{
+    background-color: var(--black);
+}
+.result-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 7fr;
+}
+.button-form-tickets{
+    margin: 25px 0px 25px;
+}
+.ticket-end-p{
+    color: white;
+    margin: 25px 0px;
+}
+.form-time{
+    width: 20%;
+}
+
+
+.error-message {
+    color: var(--red);
+}
