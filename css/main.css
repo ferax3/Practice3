@@ -84,9 +84,10 @@
 .gallery-dragons{
     display: flex;
     flex-direction: column;
-    gap: 0px 5px;
+    gap: 35px 0px;
     color: white;
     font-family: "Kharkiv";
+    padding-top: 60px;
 }
 .gallery-dragons-row{
     display: flex;
@@ -102,17 +103,68 @@
 
 
 
+
 .gallery-one{
     display: flex;
     flex-direction: column;
-    gap: 15px 0px;
+    gap: 25px 0px;
 }
 
 
-
+/* ?img */
 .Norwegian_ridgeback{
     background-image: url("../img/дракони/норвезький.png");
-    background-size: cover;
+}
+.Chinese_meteor{
+    background-image: url("../img/дракони/китайська\ метеорка.png");
+}
+.Hebridean_black{
+    background-image: url("../img/дракони/гебридій_чорний.png");
+}
+.ordinaty_green_roller{
+    background-image: url("../img/дракони/зелена_валлійка.png");
+}
+.opalook_antipodes{
+    background-image: url("../img/дракони/опалоок.png");
+}
+.Swedish_short-wing{
+    background-image: url("../img/дракони/шведська\ короткокрилка.png");
+}
+.Romanian_dovgorih{
+    background-image: url("../img/дракони/румунський_довгоріг.png");
+}
+.Hungarian_hornbill{
+    background-image: url("../img/дракони/угорська_рогохвістка.png");
+}
+.Ukrainian_iron_belly{
+    background-image: url("../img/дракони/український_залізопуз.png");
+}
+.Norwegian_ridgeback:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/норвезький.png");
+}
+.Chinese_meteor:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/китайська\ метеорка.png");
+}
+.Hebridean_black:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/гебридій_чорний.png");
+}
+.ordinaty_green_roller:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/зелена_валлійка.png");
+}
+.opalook_antipodes:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/опалоок.png");
+}
+.Swedish_short-wing:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/шведська\ короткокрилка.png");
+}
+.Romanian_dovgorih:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/румунський_довгоріг.png");
+}
+.Hungarian_hornbill:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/угорська_рогохвістка.png");
+}
+.Ukrainian_iron_belly:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/український_залізопуз.png");
 }
 
 .gallery-photo{
@@ -121,13 +173,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: cover;
 }
 .button-gallery{
     display: none;
 }
-.gallery-photo:hover{
+
+/* .gallery-photo:hover{
     background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/норвезький.png");
-}
+} */
 .gallery-photo:hover .button-gallery{
     display: block !important;
 }
