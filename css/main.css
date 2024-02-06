@@ -55,90 +55,35 @@
 .title{
     text-align: center;
     font-family: "Wentrisor";
-    padding: 35px 0px 20px;
+    padding-top: 3.97vw;
 }
 .subtitle{
     color: white;
     font-family: "Kharkiv";
     text-align: center;
+    padding: 2.78vw 0px;
 }
 .gallery-dragons{
     display: flex;
     flex-direction: column;
-    gap: 35px 0px;
+    gap: 1.65vw 0px;
     color: white;
     font-family: "Kharkiv";
-    padding-top: 60px;
 }
 .gallery-dragons-row{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 1.32vw 0px;
 }
 .gallery-one{
     display: flex;
     flex-direction: column;
-    gap: 25px 0px;
+    gap: 1.98vw 0px;
 }
-/* ?img */
-.Norwegian_ridgeback{
-    background-image: url("../img/дракони/норвезький.png");
-}
-.Chinese_meteor{
-    background-image: url("../img/дракони/китайська\ метеорка.png");
-}
-.Hebridean_black{
-    background-image: url("../img/дракони/гебридій_чорний.png");
-}
-.ordinaty_green_roller{
-    background-image: url("../img/дракони/зелена_валлійка.png");
-}
-.opalook_antipodes{
-    background-image: url("../img/дракони/опалоок.png");
-}
-.Swedish_short-wing{
-    background-image: url("../img/дракони/шведська\ короткокрилка.png");
-}
-.Romanian_dovgorih{
-    background-image: url("../img/дракони/румунський_довгоріг.png");
-}
-.Hungarian_hornbill{
-    background-image: url("../img/дракони/угорська_рогохвістка.png");
-}
-.Ukrainian_iron_belly{
-    background-image: url("../img/дракони/український_залізопуз.png");
-}
-.Norwegian_ridgeback:hover{
-    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/норвезький.png");
-}
-.Chinese_meteor:hover{
-    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/китайська\ метеорка.png");
-}
-.Hebridean_black:hover{
-    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/гебридій_чорний.png");
-}
-.ordinaty_green_roller:hover{
-    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/зелена_валлійка.png");
-}
-.opalook_antipodes:hover{
-    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/опалоок.png");
-}
-.Swedish_short-wing:hover{
-    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/шведська\ короткокрилка.png");
-}
-.Romanian_dovgorih:hover{
-    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/румунський_довгоріг.png");
-}
-.Hungarian_hornbill:hover{
-    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/угорська_рогохвістка.png");
-}
-.Ukrainian_iron_belly:hover{
-    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/український_залізопуз.png");
-}
-
 .gallery-photo{
-    width: 350px;
-    height: 350px;
+    width: 24.5vw;
+    height: 24.5vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,95 +101,79 @@
 .gallery-photo:hover .button-gallery{
     display: block !important;
 }
-/* !3page */
+/* !dragon.html */
 .dragon-img{
-    height: 600px;
+    /* height: 610px; */
+    height: 39.68vw;
+    margin-top: 5.29vw;
     object-fit: cover;
     object-position: top; /* Обрізати з верхньої частини зображення */
 }
 .desc_dragon{
     color: white;
     font-family: "Kharkiv";
-}
-.button-dragon{
-    width: 24%;
-}
-.desc_dragon-h2{
-    padding: 50px 0px 20px;
+    padding-top: 3.97vw;
 }
 .desc_dragon-p{
     line-height: 1.3;
+    padding: 1.72vw 0px;
 }
-.example{
-    margin-top: -50px;
-    display: none;
-}
-
 /* !to-do */
-.scale-in-ver-top {
-	animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-@keyframes scale-in-ver-top {
-    0% {
-      transform: scaleY(0);
-      transform-origin: 100% 0%;
-      opacity: 1;
-    }
-    100% {
-      transform: scaleY(1);
-      transform-origin: 100% 0%;
-      opacity: 1;
-    }
-}
-
 .doing{
     color: white;
     font-family: "Kharkiv";
 }
-.doing-main-title{
+.doing-main-title1{
     text-align: center;
+    margin: 5.291vw 0px;
 }
 .doing-main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 10px;
+    column-gap: 1.32vw;
+    row-gap: 3.968vw;
 }
 .doing-one{
-    padding: 40px 0px;
-    display: grid;
-    grid-template-rows: 3fr 7fr;
-    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.25vw;
+    align-content: flex-start;
+}
+.img-icon-doing{
+    width: 4.828vw;
+    height: 3.97vw;
 }
 .doing-title{
-    display: grid;
-    grid-template-columns: 1fr 7fr;
-    column-gap: 30px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.852vw;
     align-items: center;
 }
 .doing-p{
     line-height: 1.4;
 }
+.doing-main-title2{
+    text-align: center;
+    margin: 3.97vw 0px 2.25vw;
+}
 .price{
-    margin: 40px 0px;
-    padding: 40px 0px 10px;
-    border-style: solid none solid;
+    padding: 2.78vw 0px;
+    border-style: solid none;
     border-color: var(--red); 
-    border-width: 3px;
+    border-width: 0.198vw;
 }
 .price-main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    grid-auto-rows: minmax(50px, auto);
-}
-.attention{
-    padding: 25px 0px 10px;
-    color: var(--red);
+    gap: 1.98vw 2.646vw;
 }
 .price-main_h4{
-    padding: 0px 0px 15px
+    padding: 0px 0px 0.661vw;
 }
-
+.attention{
+    padding: 1.98vw 0px 0px;
+    color: var(--red);
+}
 /* !reserve.html */
 .reserve{
     color: white;
@@ -255,10 +184,11 @@
     grid-auto-columns: minmax(500px, auto);
     line-height: 1.4;
 }
-/* .reserve img {
-    width: 100%;
-    height: auto;
-} */
+.reserve_img{
+    background-image: url("../img/park-reserve.png");
+    background-size: cover;
+    background-position: center;
+}
 .reserve-desc{
     padding: 0px 0px 0px 100px;
 }
@@ -267,18 +197,12 @@
     grid-template-columns: 1fr 23fr;
     align-items: center;
 }
-
 .reserve-desc-title_p{
     padding: 25px 0px;
 }
 .reserve-desk_button{
     display: flex;
     justify-content: space-between;
-}
-.reserve_img{
-    background-image: url("../img/park-reserve.png");
-    background-size: cover;
-    background-position: center;
 }
 /* !map.html */
 .legend-title{
@@ -300,7 +224,6 @@
     align-items: center;
     gap: 15px 30px;
 }
-
 /* !tickets.html */
 .ticket{
     font-family: "Kharkiv";
@@ -391,11 +314,6 @@
     border-width: 1px;
     transition: transform 0.4s, top 0.4s;
 }
-
-
-
-
-
 .container-popup-icon_close{
     position: absolute;
     top:36px;
