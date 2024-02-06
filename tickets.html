@@ -11,35 +11,36 @@
     <title>Dragons</title>
 </head>
 <body>
+    <img src="img/fire/fire-tickets-left.png" alt="fire" class="fire fire-tickets-left">
+    <img src="img/fire/fire-tickets-right.png" alt="fire" class="fire fire-tickets-right">
+    <img src="img/fire/fire-tickets-center.png" alt="fire" class="fire fire-tickets-center">
     <header class="header">
         <nav class="header_nav">
             <ul class="nav-list">
                 <li><a href="index.html" class="nav-page">Головна</a></li>
                 <li><a href="dragons.html" class="nav-page">Дракони</a></li>
-                <li><h1 class="nav-title green-light">DL</h1></li>
+                <li><img src="img/icon/logo-header.png" alt="logo_header" class="nav-title"></li>
                 <li><a href="#" class="nav-page">Заповідник</a></li>
                 <li><a href="tickets.html" class="nav-page green-light">Квитки</a></li>
             </ul>
         </nav>
     </header>
     <main class="main ticket">
-        <div class="ticket-start">
+        <section class="ticket-start">
             <h2 class="h2">Квитки</h2>
             <h3 class="h3 ticket-start_h3">Квитки потрібно бронювати завчасно — або по телефону, або ви можете придбати їх тут. Заповніть необхідні поля та оберіть спосіб оплати.</h3>
-        </div>
+        </section>
         <form action="" class="form scale-in-ver-top">
             <h3 class="h3 form-title">Персональна інформація</h3>
             <div class="form-row p">
                 <input type="text" name="name" placeholder="Ім'я" class="form-item form-item-all input-field">
                 <input type="text" name="surname" placeholder="Прізвище" class="form-item form-item-all input-field">
                 <input type="email" name="email_user" placeholder="e-mail" class="form-item form-item-all input-field">
-            
+
                 <div class="error-message"></div>
                 <div class="error-message"></div>
                 <div class="error-message"></div>
             </div>
-            
-            
             <h3 class="h3 form-title">Інформація про відвідування</h3>
             <div class="form-row p">
                 <label for="">Кількість квитків: 
@@ -98,7 +99,7 @@
             <!-- !submit add -->
             <button id="button-form" class="button button-form-tickets" onclick="openPopup()">Забронювати квитки</button>
         </form>
-        <button type="submit" id="button-form" class="button button-form-tickets" onclick="openPopup()">Забронювати квитки</button>
+        <!-- <button type="submit" id="button-form" class="button button-form-tickets" onclick="openPopup()">Забронювати квитки</button> -->
         <div class="container-popup" id="popup" onclick="closePopup()">
             <div class="container-popup-icon_close" id="icon-close">
                 <img src="img/icon/icon-close.png" alt="">
@@ -112,16 +113,15 @@
     <footer class="footer">
         <ul class="footer-col">
             <li><a href="index.html" class="footer-item">Головна</a></li>
-            <li><a href="dragons.html" class="footer-item">Дракони</a></li>
+            <li class="footer-col_ul-center"><a href="dragons.html" class="footer-item">Дракони</a></li>
             <li><a href="reserve.html" class="footer-item">Про заповідник</a></li>
         </ul>
         <ul class="footer-col">
             <li><a href="to-do.html" class="footer-item">Відвідування заповідника</a></li>
-            <li><a href="map.html" class="footer-item">Карта заповідника</a></li>
+            <li class="footer-col_ul-center"><a href="map.html" class="footer-item">Карта заповідника</a></li>
             <li><a href="tickets.html" class="footer-item">Квитки</a></li>
         </ul>
-        <div class="footer-title">DL</div>
-
+        <div class="footer-title"><img src="img/icon/logo-footer.png" alt="logo-footer"></div>
     </footer>
 </body>
 </html>

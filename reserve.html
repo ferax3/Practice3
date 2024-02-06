@@ -6,6 +6,7 @@
     <!--need to change title-->
     <!--ALT+Z - word wrap-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/reserve.js"></script>
     <title>Dragons</title>
 </head>
 <body>
@@ -23,35 +24,33 @@
     </header>
     <main class="main">
         <section class="reserve">
-            <div class="reserve_img">
-                <!-- <img src="img/park-reserve.png" alt="park&dragon"> -->
-            </div>
-            <div class="reserve-desc">
+            <div class="reserve_img"></div>
+            <div class="reserve-desc scale-up-hor-left">
                 <div class="reserve-desc-title">
-                    <img src="img/icon/tick.png" alt="tick">
+                    <img src="img/icon/tick.png" alt="tick" class="reserve-tick">
                     <h3 class="h3">Відвідування заповідника</h3>
                 </div>
                 <p class="p reserve-desc-title_p">Ми маємо на меті вирощення драконів в природніх умовах, де ніщо не загрожує їхньому вимиранню. Завдяки цьому дракони більш спокійні і ми можемо запропонувати нашим відвідувачам спокійно спостерігати за ними, або навіть покататися верхи на прирученому драконі разом з нашим спеціалістом.</p>
                 <div class="reserve-desc-title">
-                    <img src="img/icon/tick.png" alt="tick">
+                    <img src="img/icon/tick.png" alt="tick" class="reserve-tick">
                     <h3 class="h3">Заповідник драконів</h3>
                 </div>
                 <p class="p reserve-desc-title_p">Відвідувати заповідник самотужки заборонено, адже не можна виключати того, що дракони становлять небезпеку відвідувачам, а також можливіть нанесення шкоди самим драконам. Проте відвідування та спостереження за драконами дозволене в групі з нашим гідом-чарівником.</p>
                 <div class="reserve-desc-title">
-                    <img src="img/icon/tick.png" alt="tick">
+                    <img src="img/icon/tick.png" alt="tick" class="reserve-tick">
 
                     <h3 class="h3">Lorem ipsum</h3>
                 </div>
                 <p class="p reserve-desc-title_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <div class="reserve-desc-title">
-                    <img src="img/icon/tick.png" alt="tick">
+                    <img src="img/icon/tick.png" alt="tick" class="reserve-tick">
                     <h3 class="h3">Територія</h3>
                 </div>
                 <p class="p reserve-desc-title_p">Територія заповіднику доволі велика, вона поділяється на частину, де проживають дракони, і на захищену зону, де знаходиться парк, магазин, інкубатор та виростають малята драконів.<br>
                 Територія з драконами має різні природні умови, адже різні дракони люблять різне середовище. Тут є гірська місцевість, є скелясті печери, річки, а також густі лісти та лісостепи. Щоб дістатися до певних точок спостереження за драконами ми використовуємо свій спеціальний транспорт, адже територія доволі велика і деяка місцевість може бути складною для пересування.</p>
                 <div class="reserve-desk_button">                
-                    <button id="button" class="button">Карта заповідника</button>
-                    <button id="button" class="button">Придбати квитки</button>
+                    <button id="button" class="button" onclick="navigateToMapPage()">Карта заповідника</button>
+                    <button id="button" class="button" onclick="navigateToTicketPage()">Придбати квитки</button>
                 </div>
             </div>
         </section>

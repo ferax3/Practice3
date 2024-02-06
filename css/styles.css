@@ -67,6 +67,35 @@ body{
     z-index: -1;
     width: 44.78vw;
 }
+.fire-map-left{
+    top: 28.17vw;
+    z-index: -1;
+    left: 5.489vw;
+    width: 10.119vw;
+}
+.fire-map-right{
+    top: 28.1084vw;
+    z-index: -1;
+    right: 4.299vw;
+    width: 10.119vw;
+}
+.fire-tickets-left{
+    top: 21.89vw;
+    width: 36.971vw;
+    z-index: -1;
+}
+.fire-tickets-right{
+    top: 21.29vw;
+    right: 0vw;
+    z-index: -1;
+    width: 30.49vw;
+}
+.fire-tickets-center{
+    top: 46.56vw;
+    left: 16.6vw;
+    z-index: -1;
+    width: 70.17vw;
+}
 /* !button */
 .button{
     padding: 1.058vw 1.98vw;
@@ -154,3 +183,17 @@ body{
       opacity: 1;
     }
 }
+.scale-up-hor-left {
+	animation: scale-up-hor-left 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@keyframes scale-up-hor-left {
+    0% {
+      transform: scaleX(0.4);
+      transform-origin: 0% 0%;
+    }
+    100% {
+      transform: scaleX(1);
+      transform-origin: 0% 0%;
+    }
+  }
+  

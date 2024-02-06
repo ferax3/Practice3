@@ -178,43 +178,55 @@
 .reserve{
     color: white;
     font-family: "Kharkiv";
-    display: grid;
-    grid-template-columns: 4.3fr 6.7fr;
-    /* column-gap: 100px; */
-    grid-auto-columns: minmax(500px, auto);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     line-height: 1.4;
+    margin-top: 6.217vw;
 }
 .reserve_img{
     background-image: url("../img/park-reserve.png");
-    background-size: cover;
     background-position: center;
+    background-size: cover;
+    width: 32.07vw;
 }
 .reserve-desc{
-    padding: 0px 0px 0px 100px;
+    width: 40.08vw;
 }
 .reserve-desc-title{
-    display: grid;
-    grid-template-columns: 1fr 23fr;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.728vw;
     align-items: center;
+    align-content: center;
+}
+.reserve-tick{
+    width: 0.595vw;
+    height: 1.19vw;
 }
 .reserve-desc-title_p{
-    padding: 25px 0px;
+    padding: 1.984vw 0px;
 }
 .reserve-desk_button{
     display: flex;
     justify-content: space-between;
 }
 /* !map.html */
+.img_map{
+    margin-top: 4.762vw;
+    width: 78.84vw;
+}
+
+.legend{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 7.93vw;
+    /* column-gap: 20px; */
+}
 .legend-title{
     font-family: "Wentrisor";
     display: flex;
     align-items: center;
-}
-.legend{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 100px;
-    column-gap: 20px;
 }
 .legend-items{
     font-family: "Kharkiv";
@@ -222,7 +234,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr 5fr);
     align-items: center;
-    gap: 15px 30px;
+    gap: 1vw 2vw;
 }
 /* !tickets.html */
 .ticket{
@@ -231,37 +243,37 @@
 .ticket-start{
     text-align: center;
     color: white;
-    padding-top: 25px;
+    margin-top: 5.291vw;
 }
 .ticket-start_h3{
-    padding: 40px 120px;
+    padding: 3.97vw 7.011vw;
 }
 .form{
     color: white;
     border-style: solid none solid;
     border-color: var(--red); 
-    border-width: 3px;
+    border-width: 0.198vw;
 }
 .form-title{
-    padding: 30px 0px;
+    padding: 2.778vw 0px;
 }
 .form-row{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 10px;
-    padding-bottom: 45px;
+    column-gap: 0.66vw;
+    padding-bottom: 2.778vw;
 }
 .form-item{
     border-style: none none solid;
     border-color: var(--red); 
-    border-width: 3px;
-    padding-bottom: 5px;
+    border-width: 0.19vw;
+    padding-bottom: 0.33vw;
 }
 .form-number{
     border-style: solid;
     border-color: var(--green_light); 
-    border-width: 3px;
-    padding: 7px;
+    border-width: 0.198vw;
+    padding: 0.463vw;
 }
 .form-item-all{
     width: 85%;
@@ -276,21 +288,21 @@
     display: flex;
     flex-direction: row;
     justify-content: start;
-    gap: 0 10px;
+    gap: 0px 0.661vw;
 }
 .button-form-tickets{
-    margin: 25px 0px 25px;
+    margin: 1.65vw 0px 1.65vw;
 }
 .ticket-end-p{
     color: white;
-    margin: 25px 0px;
+    margin: 1.65vw 0px 0px;
 }
 .form-time{
     width: 20%;
 }
 .error-message {
     color: var(--red);
-    font-size: 10px;
+    font-size: 0.66vw;
 }
 .container-popup{
     color: white;
