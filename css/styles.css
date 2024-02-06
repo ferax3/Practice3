@@ -29,3 +29,45 @@ body{
     font-size: var(--font-size-p);
     line-height: 1.4
 }
+/* !fire */
+.fire{
+    position: absolute;
+    /* z-index: 1; */
+} 
+.fire-holovna-left1{
+    top: 56vw;
+    width: 37.5vw;
+}
+.fire-holovna-right1{
+    top: 67vw;
+    right: 0vw;
+    z-index: -1;
+    width: 37.5vw;
+}
+.fire-holovna-left2{
+    top: 90.5vw;
+    width: 69.84vw;
+    z-index: -1;
+}
+.fire-holovna-right2{
+    top: 133vw;
+    right: 0vw;
+    z-index: -1;
+    width: 26.72vw;
+}
+/* !button */
+.button{
+    padding: 1.058vw 1.98vw;
+    border-style: solid;
+    border-color: var(--red); 
+    border-width: 0.0661vw;
+    border-radius: 0.5291vw;
+    transition: .5s ease;
+    font-size: var(--font-size-h4);
+}
+.button:hover{
+    background-color: var(--red_dark);
+}
+.button:active{
+    background-color: var(--red);
+}
