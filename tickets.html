@@ -6,49 +6,52 @@
     <!--need to change title-->
     <!--ALT+Z - word wrap-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/form.js"></script>
+
     <title>Dragons</title>
 </head>
 <body>
+    <img src="img/fire/fire-tickets-left.png" alt="fire" class="fire fire-tickets-left">
+    <img src="img/fire/fire-tickets-right.png" alt="fire" class="fire fire-tickets-right">
+    <img src="img/fire/fire-tickets-center.png" alt="fire" class="fire fire-tickets-center">
     <header class="header">
         <nav class="header_nav">
             <ul class="nav-list">
                 <li><a href="index.html" class="nav-page">Головна</a></li>
                 <li><a href="dragons.html" class="nav-page">Дракони</a></li>
-                <li><h1 class="nav-title green-light">DL</h1></li>
+                <li><img src="img/icon/logo-header.png" alt="logo_header" class="nav-title"></li>
                 <li><a href="#" class="nav-page">Заповідник</a></li>
                 <li><a href="tickets.html" class="nav-page green-light">Квитки</a></li>
             </ul>
         </nav>
     </header>
     <main class="main ticket">
-        <div class="ticket-start">
+        <section class="ticket-start">
             <h2 class="h2">Квитки</h2>
             <h3 class="h3 ticket-start_h3">Квитки потрібно бронювати завчасно — або по телефону, або ви можете придбати їх тут. Заповніть необхідні поля та оберіть спосіб оплати.</h3>
-        </div>
+        </section>
         <form action="" class="form scale-in-ver-top">
             <h3 class="h3 form-title">Персональна інформація</h3>
             <div class="form-row p">
                 <input type="text" name="name" placeholder="Ім'я" class="form-item form-item-all input-field">
                 <input type="text" name="surname" placeholder="Прізвище" class="form-item form-item-all input-field">
                 <input type="email" name="email_user" placeholder="e-mail" class="form-item form-item-all input-field">
-            
+
                 <div class="error-message"></div>
                 <div class="error-message"></div>
                 <div class="error-message"></div>
             </div>
-            
-            
             <h3 class="h3 form-title">Інформація про відвідування</h3>
             <div class="form-row p">
                 <label for="">Кількість квитків: 
-                    <input type="number" name="count_tickets" min="1" max="30" value="1" class="form-number">
+                    <input type="number" name="count_tickets" min="1" max="30" value="1" class="form-number" onchange="calculateTotal()">
                 </label>
-                <select name="activity" class="select form-item form-item-all input-field">
+                <select name="activity" class="select form-item form-item-all input-field" onchange="calculateTotal()">
                     <option value="" disabled selected>Оберіть активність</option>
-                    <option>Вхід до інкубатора<br> та малят-драконів</option>
+                    <option>Вхід до інкубатора</option>
                     <option>Підйом на гору</option>
                     <option>Політ на драконі</option>
-                    <option>Відвідування одного місця з драконами</option>
+                    <option>Спостереження за драконами</option>
                 </select>
                 <select name="select_dragon" class="select form-item form-item-all input-field">
                     <option value="" disabled selected>Оберіть дракона</option>
@@ -64,100 +67,61 @@
                 </select>
             </div>
             <div class="form-row p">
-                <label> Оберіть дату візиту:
+                <label id ="form-date"> Оберіть дату візиту:
                     <input type="date" name="date_visit" class="form-item input-field" id="datePicker" onchange="restrictDays()"> 
                 </label>
-
-                <label for="">Оберіть час візиту:
+                <label id="form-time">Оберіть час візиту:
                     <select name="select_time" class="select form-item form-time input-field">
                         <option value="" disabled selected>00:00</option>
-                        <option>09:00</option>
+                        <option>10:00</option>
                         <option>15:00</option>
                     </select>
                 </label>
-                <!-- <label> Оберіть час візиту:
-                    <input type="time" name="time_visit" class="form-item" onchange="formatTime(this.value)">
-                </label> -->
-
-                <!-- !JS -->
-                <script>
-                    function restrictDays() {
-                        var datePicker = document.getElementById('datePicker');
-                        var selectedDate = new Date(datePicker.value);
-                        var today = new Date(); // Сьогоднішня дата
-                        var maxDate = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate()); // Дата через місяць вперед
-
-                        // Перевірка, чи вибрана дата не раніш або рівна сьогоднішній даті
-                        if (selectedDate <= today) {
-                            alert('Будь ласка, оберіть дату, яка є майбутньою.');
-                            datePicker.value = ''; // Очистити поле введення, якщо вибрана дата не є майбутньою
-                        } else if (selectedDate > maxDate) {
-                            alert('Будь ласка, оберіть дату, яка не перевищує межу за місяць вперед.');
-                            datePicker.value = ''; // Очистити поле введення, якщо вибрана дата перевищує межу за місяць вперед
-                        } else if (selectedDate.getDay() !== 5 && selectedDate.getDay() !== 6) {
-                            alert('Будь ласка, виберіть п\'ятницю або суботу.');
-                            datePicker.value = ''; // Очистити поле введення, якщо вибраний день не є п'ятницею або суботою
-                        }
-                    }
-                    function formatTime(value) {
-                        // Розбити значення на години та хвилини
-                        var parts = value.split(":");
-                        var hours = parts[0];
-                        var minutes = parts[1];
-
-                        // Забезпечити, що хвилини завжди відображаються як 00
-                        minutes = "00";
-
-                        // Скласти години та хвилини назад
-                        var formattedTime = hours + ":" + minutes;
-
-                        // Присвоїти отформатований час назад у поле вводу
-                        document.getElementsByName("time_visit")[0].value = formattedTime;
-                    }
-
-                    document.addEventListener('DOMContentLoaded', function () {
-                        const inputFields = document.querySelectorAll('.input-field');
-                        const errorMessages = document.querySelectorAll('.error-message');
-                        inputFields.forEach((input, index) => {
-                            input.addEventListener('input', function () {
-                                if (input.value.trim() !== '') {
-                                    input.style.borderColor = 'var(--green_light)';
-                                    errorMessages[index].textContent = '';
-                                } else {
-                                    input.style.borderColor = 'var(--red)';
-                                    errorMessages[index].textContent = 'Заповніть це поле!';
-                                }
-                            });
-                        });
-                    });
-
-
-                </script>
-
-
-
+                <div id="list-dragons">
+                    <p class="p">
+                        Норвезький хребтоспин - пн та чт;<br>
+                        Угорська рогохвістка - пн та чт;<br>
+                        Український залізопуз - пн та чт;<br>
+                        Китайська метеорка - вт та пт;<br>
+                        Звичайна зелена валійка - вт та пт;<br>
+                        Гебридій чорний - ср та сб;<br>
+                        Румунський довгоріг - ср та сб;<br>
+                        Опалоок антиподібний - ср та нд;<br>
+                        Шведська короткокрилка - ср та нд;<br>
+                    </p>
+                </div>
             </div>
             <div class="result-form green-light">
                 <h3 class="h3">Всього:</h3>
-                <h3 class="h3">0 у.о.</h3>
+                <h3 class="h3" id="result-form-h3">0</h3>
+                <h3 class="h3">y.o.</h3>
             </div>
             <!-- !submit add -->
-            <button id="button" type="submit" class="button button-form-tickets">Забронювати квитки</button>
+            <button id="button-form" class="button button-form-tickets" onclick="openPopup()">Забронювати квитки</button>
         </form>
+        <!-- <button type="submit" id="button-form" class="button button-form-tickets" onclick="openPopup()">Забронювати квитки</button> -->
+        <div class="container-popup" id="popup" onclick="closePopup()">
+            <div class="container-popup-icon_close" id="icon-close">
+                <img src="img/icon/icon-close.png" alt="">
+            </div>
+            <h2 class="h2">Квитки заброньовано!</h2>
+            <p class="p">Дякуємо Вам за оформлення квитків. Підтвердження броні прийде Вам на пошту протягом кількох хвилин. Будь ласка, здійсніть оплату протягом 24-х годин, після чого ви отримаєте квитки на Вашу пошту.</p>
+            <button id="button-pay" class="button p" onclick="closePopup()">Оплатити зараз</button>
+        </div>
         <p class="p ticket-end-p">Після натиснення кнопки “Забронювати квитки” Ви отримаєте підтвердження бронювання на вказану пошту. Опісля Ви можете оплатити квитки одразу або протягом 24-х годин після підтвердження броні (за посиланням у листі з підтвердженням). Коли оплата пройде успішно, електронний лист з квитками прийде на Вашу пошту.</p>
     </main>
     <footer class="footer">
         <ul class="footer-col">
             <li><a href="index.html" class="footer-item">Головна</a></li>
-            <li><a href="dragons.html" class="footer-item">Дракони</a></li>
+            <li class="footer-col_ul-center"><a href="dragons.html" class="footer-item">Дракони</a></li>
             <li><a href="reserve.html" class="footer-item">Про заповідник</a></li>
         </ul>
         <ul class="footer-col">
             <li><a href="to-do.html" class="footer-item">Відвідування заповідника</a></li>
-            <li><a href="map.html" class="footer-item">Карта заповідника</a></li>
+            <li class="footer-col_ul-center"><a href="map.html" class="footer-item">Карта заповідника</a></li>
             <li><a href="tickets.html" class="footer-item">Квитки</a></li>
         </ul>
-        <div class="footer-title">DL</div>
+        <div class="footer-title"><img src="img/icon/logo-footer.png" alt="logo-footer"></div>
     </footer>
 </body>
 </html>

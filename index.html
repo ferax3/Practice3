@@ -6,15 +6,21 @@
     <!--need to change title-->
     <!--ALT+Z - word wrap-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/index.js"></script>
     <title>Dragons</title>
 </head>
 <body>
+    <img src="img/fire/fire-holovna-left1.png" alt="fire" class="fire fire-holovna-left1">
+    <img src="img/fire/fire-holovna-right1.png" alt="fire" class="fire fire-holovna-right1">
+    <img src="img/fire/fire-holovna-left2.png" alt="fire" class="fire fire-holovna-left2">
+    <img src="img/fire/fire-holovna-right2.png" alt="fire" class="fire fire-holovna-right2">
+    
     <header class="header">
         <nav class="header_nav">
             <ul class="nav-list">
                 <li><a href="index.html" class="nav-page green-light">Головна</a></li>
                 <li><a href="dragons.html" class="nav-page">Дракони</a></li>
-                <li><h1 class="nav-title green-light">DL</h1></li>
+                <li><img src="img/icon/logo-header.png" alt="logo_header" class="nav-title"></li>
                 <li><a href="#" class="nav-page">Заповідник</a></li>
                 <li><a href="tickets.html" class="nav-page">Квитки</a></li>
             </ul>
@@ -33,59 +39,59 @@
                 <li class="nav-li"><a href="#" class="nav-page">Квитки</a></li>
             </ul>
         </nav> -->
-        <div class="header_desc">
+        <section class="header_desc">
             <h1 class="header_desc-title">DragonLand -</h1>
             <p class="header_desc-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
+        </section>
     </header>
     <main class="main">
-        <div class="welcome">
+        <section class="welcome">
             <h3 class="welcome_h3">Ласкаво просимо на наш веб-портал, присвячений чудовим і загадковим створінням - драконам! Тут ви знайдете захоплюючу інформацію про цих величних істот, які завжди привертали увагу та захоплювали уяву людей різних культур і епох.</h3>
-        </div>
-        <div class="about about-left">
+        </section>
+        <section class="about about-left">
             <div class="about-title">
                 <h1>Про драконів</h1>
             </div>
             <div class="about-desc">
-                <h3 class = "h3 about_h3">Хто такі дракони?</h3>
-                <p class="p">Дракони - це могутні магічні ящіроподібні істоти, яких досить нелегко заховати чи приручити. Вони здатні вивергати полум’я, високо літати на великих крилах. До драконів в дикій природі не варто наближатися нікому, окрім кваліфікованих людей, адже вони можуть бути агресивними та завдати шкоди.</p>
-                <h3 class = "h3 about_h3">Різноманіття видів драконів</h3>
-                <p class="p">Драконяча шкура, кров, серце, печінка, ріг дракона відомі потужними магічними властивостями, однак це сприяє винищенню драконів в дикій природі. Існує десять видів чистопородних порід драконів, і щоб зберегти усі з них було створено наш Заповідник.<br>
+                <h3 class = "h3">Хто такі дракони?</h3>
+                <p class="p about_p">Дракони - це могутні магічні ящіроподібні істоти, яких досить нелегко заховати чи приручити. Вони здатні вивергати полум’я, високо літати на великих крилах. До драконів в дикій природі не варто наближатися нікому, окрім кваліфікованих людей, адже вони можуть бути агресивними та завдати шкоди.</p>
+                <h3 class = "h3">Різноманіття видів драконів</h3>
+                <p class="p about_p">Драконяча шкура, кров, серце, печінка, ріг дракона відомі потужними магічними властивостями, однак це сприяє винищенню драконів в дикій природі. Існує десять видів чистопородних порід драконів, і щоб зберегти усі з них було створено наш Заповідник.<br>
                 Звісно, різновидів драконів значно більше, які утворені внаслідок схрещення. Деякі цікаві породи також можна знайти у нашому заповіднику, а які саме - можете дізнатися самі :)</p>
-                <button id="button" class="button">Детальніше про драконів</button>
+                <button id="button" class="button" onclick="navigateToDragonsPage()">Детальніше про драконів</button>
             </div>
-        </div>
-        <div class="about about-right">
-            <div class="about-title right-to-left-text">
+        </section>
+        <section class="about about-right">
+            <div class="about-title">
                 <h1>Про заповідник</h1>
             </div>
             <div class="about-desc">
-                <h3 class = "h3 about_h3 ">Заповідник драконів</h3>
-                <p class="p">Ми маємо на меті вирощення драконів в природніх умовах, де ніщо не загрожує їхньому вимиранню. Завдяки цьому дракони більш спокійні і ми можемо запропонувати нашим відвідувачам спокійно спостерігати за ними, або навіть покататися верхи на прирученому драконі разом з нашим спеціалістом.</p>
-                <h3 class = "h3 about_h3">Відвідування заповідника</h3>
-                <p class="p">Відвідувати заповідник самотужки заборонено, адже не можна виключати того, що дракони становлять небезпеку відвідувачам, а також можливіть нанесення шкоди самим драконам. Проте відвідування та спостереження за драконами дозволене в групі з нашим гідом-чарівником.</p>
-                <button id="button" class="button">Детальніше про заповідник</button>
+                <h3 class = "h3">Заповідник драконів</h3>
+                <p class="p about_p">Ми маємо на меті вирощення драконів в природніх умовах, де ніщо не загрожує їхньому вимиранню. Завдяки цьому дракони більш спокійні і ми можемо запропонувати нашим відвідувачам спокійно спостерігати за ними, або навіть покататися верхи на прирученому драконі разом з нашим спеціалістом.</p>
+                <h3 class = "h3">Відвідування заповідника</h3>
+                <p class="p about_p">Відвідувати заповідник самотужки заборонено, адже не можна виключати того, що дракони становлять небезпеку відвідувачам, а також можливіть нанесення шкоди самим драконам. Проте відвідування та спостереження за драконами дозволене в групі з нашим гідом-чарівником.</p>
+                <button id="button" class="button" onclick="navigateToReservePage()">Детальніше про заповідник</button>
             </div>
-        </div>
+        </section>
     </main>
-    <section>
+    <!-- <section>
         <div class="opportunities">
             <img src="img/дракони/гадозуб.png">
             <h3 class="desc_dragon h3 example">Lorem ipsum</h3>
         </div>
-    </section>
+    </section> -->
     <footer class="footer">
         <ul class="footer-col">
             <li><a href="index.html" class="footer-item">Головна</a></li>
-            <li><a href="dragons.html" class="footer-item">Дракони</a></li>
+            <li class="footer-col_ul-center"><a href="dragons.html" class="footer-item">Дракони</a></li>
             <li><a href="reserve.html" class="footer-item">Про заповідник</a></li>
         </ul>
         <ul class="footer-col">
             <li><a href="to-do.html" class="footer-item">Відвідування заповідника</a></li>
-            <li><a href="map.html" class="footer-item">Карта заповідника</a></li>
+            <li class="footer-col_ul-center"><a href="map.html" class="footer-item">Карта заповідника</a></li>
             <li><a href="tickets.html" class="footer-item">Квитки</a></li>
         </ul>
-        <div class="footer-title">DL</div>
+        <div class="footer-title"><img src="img/icon/logo-footer.png" alt="logo-footer"></div>
     </footer>
 </body>
 </html>

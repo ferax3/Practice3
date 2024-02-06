@@ -1,10 +1,12 @@
 .footer{
-    padding: 150px 10.5% 30px;
+    margin-top: 7.937vw;
+    padding: 2.38vw 10.582vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     color: white;
     align-items: center;
+    background-color: var(--green_dark);
 }
 .footer-col{
     font-family: "Kharkiv";
@@ -14,15 +16,15 @@
     line-height: 1.5;
 }
 .footer-title{
-    font-family: "Wentrisor";
-    font-size: var(--font-size-h2);
-    text-align: center;
+    width: 8.8909vw;
+    height: 4.6296vw;
 }
 .footer-item{
     color: white;
-    transition: 300ms;
 }
 .footer-item:hover{
-    color:var(--green_light);
-    transition: 300ms;
+    text-decoration: underline;
+}
+.footer-col_ul-center{
+    padding: 0.397vw 0px;
 }

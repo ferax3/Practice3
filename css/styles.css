@@ -29,3 +29,171 @@ body{
     font-size: var(--font-size-p);
     line-height: 1.4
 }
+/* !fire */
+.fire{
+    position: absolute;
+    /* z-index: 1; */
+} 
+.fire-holovna-left1{
+    top: 56vw;
+    width: 37.5vw;
+}
+.fire-holovna-right1{
+    top: 67vw;
+    right: 0vw;
+    z-index: -1;
+    width: 37.5vw;
+}
+.fire-holovna-left2{
+    top: 90.5vw;
+    width: 69.84vw;
+    z-index: -1;
+}
+.fire-holovna-right2{
+    top: 133vw;
+    right: 0vw;
+    z-index: -1;
+    width: 26.72vw;
+}
+.fire-to_do_center{
+    top: 31.75vw;
+    left: 14.88vw;
+    z-index: -1;
+    width: 70.17vw;
+}
+.fire-to_do_right{
+    top: 64.15vw;
+    right: 0vw;
+    z-index: -1;
+    width: 44.78vw;
+}
+.fire-map-left{
+    top: 28.17vw;
+    z-index: -1;
+    left: 5.489vw;
+    width: 10.119vw;
+}
+.fire-map-right{
+    top: 28.1084vw;
+    z-index: -1;
+    right: 4.299vw;
+    width: 10.119vw;
+}
+.fire-tickets-left{
+    top: 21.89vw;
+    width: 36.971vw;
+    z-index: -1;
+}
+.fire-tickets-right{
+    top: 21.29vw;
+    right: 0vw;
+    z-index: -1;
+    width: 30.49vw;
+}
+.fire-tickets-center{
+    top: 46.56vw;
+    left: 16.6vw;
+    z-index: -1;
+    width: 70.17vw;
+}
+/* !button */
+.button{
+    padding: 1.058vw 1.98vw;
+    border-style: solid;
+    border-color: var(--red); 
+    border-width: 0.0661vw;
+    border-radius: 0.5291vw;
+    transition: .5s ease;
+    font-size: var(--font-size-h4);
+}
+.button:hover{
+    background-color: var(--red_dark);
+}
+.button:active{
+    background-color: var(--red);
+}
+/* !img(dragons.html) */
+.Norwegian_ridgeback{
+    background-image: url("../img/дракони/норвезький.png");
+}
+.Chinese_meteor{
+    background-image: url("../img/дракони/китайська\ метеорка.png");
+}
+.Hebridean_black{
+    background-image: url("../img/дракони/гебридій_чорний.png");
+}
+.ordinaty_green_roller{
+    background-image: url("../img/дракони/зелена_валлійка.png");
+}
+.opalook_antipodes{
+    background-image: url("../img/дракони/опалоок.png");
+}
+.Swedish_short-wing{
+    background-image: url("../img/дракони/шведська\ короткокрилка.png");
+}
+.Romanian_dovgorih{
+    background-image: url("../img/дракони/румунський_довгоріг.png");
+}
+.Hungarian_hornbill{
+    background-image: url("../img/дракони/угорська_рогохвістка.png");
+}
+.Ukrainian_iron_belly{
+    background-image: url("../img/дракони/український_залізопуз.png");
+}
+.Norwegian_ridgeback:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/норвезький.png");
+}
+.Chinese_meteor:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/китайська\ метеорка.png");
+}
+.Hebridean_black:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/гебридій_чорний.png");
+}
+.ordinaty_green_roller:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/зелена_валлійка.png");
+}
+.opalook_antipodes:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/опалоок.png");
+}
+.Swedish_short-wing:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/шведська\ короткокрилка.png");
+}
+.Romanian_dovgorih:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/румунський_довгоріг.png");
+}
+.Hungarian_hornbill:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/угорська_рогохвістка.png");
+}
+.Ukrainian_iron_belly:hover{
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/дракони/український_залізопуз.png");
+}
+/* !animation */
+.scale-in-ver-top {
+	animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes scale-in-ver-top {
+    0% {
+      transform: scaleY(0);
+      transform-origin: 100% 0%;
+      opacity: 1;
+    }
+    100% {
+      transform: scaleY(1);
+      transform-origin: 100% 0%;
+      opacity: 1;
+    }
+}
+.scale-up-hor-left {
+	animation: scale-up-hor-left 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@keyframes scale-up-hor-left {
+    0% {
+      transform: scaleX(0.4);
+      transform-origin: 0% 0%;
+    }
+    100% {
+      transform: scaleX(1);
+      transform-origin: 0% 0%;
+    }
+  }
+  

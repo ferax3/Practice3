@@ -3,45 +3,28 @@
     flex-direction: column;
 }
 .header_nav{
-    padding: 10px 160px;
+    padding: 0.4vw 10.58vw;
     /* подумати над тим щоб при прокручуванні все працювало норм*/
     position: relative; 
-    width:100%;
+    width: 100%;
     background-color: var(--black);
-    z-index: 999;
 }
 .nav-list{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.nav-li{ /* */
-    display: inline-block;
-    position: relative;
-}
 .nav-page{
     font-size: var(--font-size-h4);
     font-family: "Kharkiv";
     color:white;
-    padding: 10px 15px;
-    display: block; /* */
+    padding: 0.66vw 1.32vw;
     border-style: solid;
     border-color: var(--black);
     border-radius: 8px;
     transition: 300ms;
-    border-width: 1px;
+    border-width: 0.066vw;
 }
-ul.dropdown li{
-    display: block;
-}
-ul.dropdown{
-    width: 100%;
-    position: absolute;
-    z-index: 999;
-    display: none;
-}
-
-
 .nav-page:hover{
     color: white;
     border-color: var(--red);
@@ -51,19 +34,18 @@ ul.dropdown{
     color:var(--green_light);
 }
 .nav-title{
-    font-size: var(--font-size-h1);
-    font-family: "Wentrisor";
+    width: 12.7vw;
+    height: 6.61vw;
 }
-
 .header_desc{
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(25, 27, 25, 1)), url(../img/header-bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    padding-top: 690px;
-    padding-left: 160px;
-    height: 1024px;
+    padding-top: 28.9vw;
+    padding-left: 10.58vw;
+    height: 52.25vw;
 }
 .header_desc-title{
     font-family: "Wentrisor";
@@ -72,32 +54,31 @@ ul.dropdown{
 .header_desc-subtitle{
     font-family: "Kharkiv";
     font-size: var(--font-size-h4);
-    width: 835px;
-    padding: 30px 0px 20px 0px;
+    width: 55.22vw;
+    padding: 2.116vw 0px 2.116vw;
     border-style: none none solid none;
     border-color: var(--red); 
-    border-width: 3px;
+    border-width: 0.198vw;
 }
 /* !reserve.html */
 .reserve-title{
-    margin-top: 150px;
+    margin-top: 5.291vw;
     text-align: center;
     font-family: "Wentrisor";
     color: var(--green_light);
-    padding: 30px 0px;
+    padding: 1.984vw 0px;
     background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(25, 27, 25, 0.5)), url("../img/bg-reserve-header.png");
     background-size: cover;
     background-position: center;
 }
+/* !map.html */
 .map-title{
-    margin-top: 150px;
+    margin-top: 5.291vw;
     text-align: center;
     font-family: "Wentrisor";
     color: var(--green_light);
-    padding: 30px 0px;
+    padding: 1.984vw 0px;
     background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(25, 27, 25, 0.5)), url("../img/mountain-bg-header-map.png");
     background-size: cover;
     background-position: center;
 }
-
-
