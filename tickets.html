@@ -1,127 +1,239 @@
 <!DOCTYPE html>
 <html lang="ua">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--need to change title-->
     <!--ALT+Z - word wrap-->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <script src="js/form.js"></script>
+    <!--іконки-->
+    <script src="https://use.fontawesome.com/08c46a2805.js"></script>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
 
-    <title>Dragons</title>
-</head>
-<body>
-    <img src="img/fire/fire-tickets-left.png" alt="fire" class="fire fire-tickets-left">
-    <img src="img/fire/fire-tickets-right.png" alt="fire" class="fire fire-tickets-right">
-    <img src="img/fire/fire-tickets-center.png" alt="fire" class="fire fire-tickets-center">
+    <title>DragonLand - Квитки</title>
+  </head>
+  <body>
+    <img
+      src="img/fire/fire-tickets-left.png"
+      alt="fire"
+      class="fire fire-tickets-left"
+    />
+    <img
+      src="img/fire/fire-tickets-right.png"
+      alt="fire"
+      class="fire fire-tickets-right"
+    />
+    <img
+      src="img/fire/fire-tickets-center.png"
+      alt="fire"
+      class="fire fire-tickets-center"
+    />
     <header class="header">
-        <nav class="header_nav">
-            <ul class="nav-list">
-                <li><a href="index.html" class="nav-page">Головна</a></li>
-                <li><a href="dragons.html" class="nav-page">Дракони</a></li>
-                <li><img src="img/icon/logo-header.png" alt="logo_header" class="nav-title"></li>
-                <li><a href="#" class="nav-page">Заповідник</a></li>
-                <li><a href="tickets.html" class="nav-page green-light">Квитки</a></li>
+      <nav class="header_nav">
+        <input type="checkbox" id="check" />
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-page green-light">Головна</a></li>
+          <li><a href="dragons.html" class="nav-page">Дракони</a></li>
+          <li>
+            <img
+              src="img/icon/logo-header.png"
+              alt="logo_header"
+              class="nav-title"
+            />
+          </li>
+          <li>
+            <a href="#" class="nav-page">Заповідник</a>
+            <ul class="dropdown">
+              <li>
+                <a href="reserve.html" class="nav-page">Про заповідник</a>
+              </li>
+              <li>
+                <a href="to-do.html" class="nav-page"
+                  >Відвідування заповідника</a
+                >
+              </li>
+              <li><a href="map.html" class="nav-page">Карта заповідника</a></li>
             </ul>
-        </nav>
+          </li>
+          <li><a href="tickets.html" class="nav-page">Квитки</a></li>
+          <label for="check" class="close-menu"
+            ><i class="fa fa-times" aria-hidden="true"></i
+          ></label>
+        </ul>
+        <label for="check" class="open-menu"
+          ><i class="fa fa-bars" aria-hidden="true"></i
+        ></label>
+      </nav>
     </header>
     <main class="main ticket">
-        <section class="ticket-start">
-            <h2 class="h2">Квитки</h2>
-            <h3 class="h3 ticket-start_h3">Квитки потрібно бронювати завчасно — або по телефону, або ви можете придбати їх тут. Заповніть необхідні поля та оберіть спосіб оплати.</h3>
-        </section>
-        <form action="" class="form scale-in-ver-top">
-            <h3 class="h3 form-title">Персональна інформація</h3>
-            <div class="form-row p">
-                <input type="text" name="name" placeholder="Ім'я" class="form-item form-item-all input-field">
-                <input type="text" name="surname" placeholder="Прізвище" class="form-item form-item-all input-field">
-                <input type="email" name="email_user" placeholder="e-mail" class="form-item form-item-all input-field">
+      <section class="ticket-start">
+        <h2 class="h2">Квитки</h2>
+        <h3 class="h3 ticket-start_h3">
+          Квитки потрібно бронювати завчасно — або по телефону, або ви можете
+          придбати їх тут. Заповніть необхідні поля та оберіть спосіб оплати.
+        </h3>
+      </section>
+      <form action="" class="form scale-in-ver-top">
+        <h3 class="h3 form-title">Персональна інформація</h3>
+        <div class="form-row p">
+          <input
+            type="text"
+            name="name"
+            placeholder="Ім'я"
+            class="form-item form-item-all input-field"
+          />
+          <input
+            type="text"
+            name="surname"
+            placeholder="Прізвище"
+            class="form-item form-item-all input-field"
+          />
+          <input
+            type="email"
+            name="email_user"
+            placeholder="e-mail"
+            class="form-item form-item-all input-field"
+          />
 
-                <div class="error-message"></div>
-                <div class="error-message"></div>
-                <div class="error-message"></div>
-            </div>
-            <h3 class="h3 form-title">Інформація про відвідування</h3>
-            <div class="form-row p">
-                <label for="">Кількість квитків: 
-                    <input type="number" name="count_tickets" min="1" max="30" value="1" class="form-number" onchange="calculateTotal()">
-                </label>
-                <select name="activity" class="select form-item form-item-all input-field" onchange="calculateTotal()">
-                    <option value="" disabled selected>Оберіть активність</option>
-                    <option>Вхід до інкубатора</option>
-                    <option>Підйом на гору</option>
-                    <option>Політ на драконі</option>
-                    <option>Спостереження за драконами</option>
-                </select>
-                <select name="select_dragon" class="select form-item form-item-all input-field">
-                    <option value="" disabled selected>Оберіть дракона</option>
-                    <option>Норвезький хребтоспин</option>
-                    <option>Китайська метеорка</option>
-                    <option>Гебридій чорний</option>
-                    <option>Звичайна зелена валійка</option>
-                    <option>Опалоок антиподібний</option>
-                    <option>Шведська короткокрилка</option>
-                    <option>Румунський довгоріг</option>
-                    <option>Угорська рогохвістка</option>
-                    <option>Український залізопуз</option>
-                </select>
-            </div>
-            <div class="form-row p">
-                <label id ="form-date"> Оберіть дату візиту:
-                    <input type="date" name="date_visit" class="form-item input-field" id="datePicker" onchange="restrictDays()"> 
-                </label>
-                <label id="form-time">Оберіть час візиту:
-                    <select name="select_time" class="select form-item form-time input-field">
-                        <option value="" disabled selected>00:00</option>
-                        <option>10:00</option>
-                        <option>15:00</option>
-                    </select>
-                </label>
-                <div id="list-dragons">
-                    <p class="p">
-                        Норвезький хребтоспин - пн та чт;<br>
-                        Угорська рогохвістка - пн та чт;<br>
-                        Український залізопуз - пн та чт;<br>
-                        Китайська метеорка - вт та пт;<br>
-                        Звичайна зелена валійка - вт та пт;<br>
-                        Гебридій чорний - ср та сб;<br>
-                        Румунський довгоріг - ср та сб;<br>
-                        Опалоок антиподібний - ср та нд;<br>
-                        Шведська короткокрилка - ср та нд;<br>
-                    </p>
-                </div>
-            </div>
-            <div class="result-form green-light">
-                <h3 class="h3">Всього:</h3>
-                <h3 class="h3" id="result-form-h3">0</h3>
-                <h3 class="h3">y.o.</h3>
-            </div>
-            <!-- !submit add -->
-            <button id="button-form" class="button button-form-tickets" onclick="openPopup()">Забронювати квитки</button>
-        </form>
-        <!-- <button type="submit" id="button-form" class="button button-form-tickets" onclick="openPopup()">Забронювати квитки</button> -->
-        <div class="container-popup" id="popup" onclick="closePopup()">
-            <div class="container-popup-icon_close" id="icon-close">
-                <img src="img/icon/icon-close.png" alt="">
-            </div>
-            <h2 class="h2">Квитки заброньовано!</h2>
-            <p class="p">Дякуємо Вам за оформлення квитків. Підтвердження броні прийде Вам на пошту протягом кількох хвилин. Будь ласка, здійсніть оплату протягом 24-х годин, після чого ви отримаєте квитки на Вашу пошту.</p>
-            <button id="button-pay" class="button p" onclick="closePopup()">Оплатити зараз</button>
+          <div class="error-message"></div>
+          <div class="error-message"></div>
+          <div class="error-message"></div>
         </div>
-        <p class="p ticket-end-p">Після натиснення кнопки “Забронювати квитки” Ви отримаєте підтвердження бронювання на вказану пошту. Опісля Ви можете оплатити квитки одразу або протягом 24-х годин після підтвердження броні (за посиланням у листі з підтвердженням). Коли оплата пройде успішно, електронний лист з квитками прийде на Вашу пошту.</p>
+        <h3 class="h3 form-title">Інформація про відвідування</h3>
+        <div class="form-row p">
+          <label for=""
+            >Кількість квитків:
+            <input
+              type="number"
+              name="count_tickets"
+              min="1"
+              max="30"
+              value="1"
+              class="form-number"
+              onchange="calculateTotal()"
+            />
+          </label>
+          <select
+            name="activity"
+            class="select form-item form-item-all input-field"
+            onchange="calculateTotal()"
+          >
+            <option value="" disabled selected>Оберіть активність</option>
+            <option>Вхід до інкубатора</option>
+            <option>Підйом на гору</option>
+            <option>Політ на драконі</option>
+            <option>Спостереження за драконами</option>
+          </select>
+          <select
+            name="select_dragon"
+            class="select form-item form-item-all input-field"
+          >
+            <option value="" disabled selected>Оберіть дракона</option>
+            <option>Норвезький хребтоспин</option>
+            <option>Китайська метеорка</option>
+            <option>Гебридій чорний</option>
+            <option>Звичайна зелена валійка</option>
+            <option>Опалоок антиподібний</option>
+            <option>Шведська короткокрилка</option>
+            <option>Румунський довгоріг</option>
+            <option>Угорська рогохвістка</option>
+            <option>Український залізопуз</option>
+          </select>
+        </div>
+        <div class="form-row p">
+          <label id="form-date">
+            Оберіть дату візиту:
+            <input
+              type="date"
+              name="date_visit"
+              class="form-item input-field"
+              id="datePicker"
+              onchange="restrictDays()"
+            />
+          </label>
+          <label id="form-time"
+            >Оберіть час візиту:
+            <select
+              name="select_time"
+              class="select form-item form-time input-field"
+            >
+              <option value="" disabled selected>00:00</option>
+              <option>10:00</option>
+              <option>15:00</option>
+            </select>
+          </label>
+          <div id="list-dragons">
+            <p class="p">
+              Норвезький хребтоспин - пн та чт;<br />
+              Угорська рогохвістка - пн та чт;<br />
+              Український залізопуз - пн та чт;<br />
+              Китайська метеорка - вт та пт;<br />
+              Звичайна зелена валійка - вт та пт;<br />
+              Гебридій чорний - ср та сб;<br />
+              Румунський довгоріг - ср та сб;<br />
+              Опалоок антиподібний - ср та нд;<br />
+              Шведська короткокрилка - ср та нд;<br />
+            </p>
+          </div>
+        </div>
+        <div class="result-form green-light">
+          <h3 class="h3">Всього:</h3>
+          <h3 class="h3" id="result-form-h3">0</h3>
+          <h3 class="h3">y.o.</h3>
+        </div>
+        <!-- !submit add -->
+        <button
+          id="button-form"
+          class="button button-form-tickets"
+          onclick="openPopup()"
+        >
+          Забронювати квитки
+        </button>
+      </form>
+      <!-- <button type="submit" id="button-form" class="button button-form-tickets" onclick="openPopup()">Забронювати квитки</button> -->
+      <div class="container-popup" id="popup" onclick="closePopup()">
+        <div class="container-popup-icon_close" id="icon-close">
+          <img src="img/icon/icon-close.png" alt="" />
+        </div>
+        <h2 class="h2">Квитки заброньовано!</h2>
+        <p class="p">
+          Дякуємо Вам за оформлення квитків. Підтвердження броні прийде Вам на
+          пошту протягом кількох хвилин. Будь ласка, здійсніть оплату протягом
+          24-х годин, після чого ви отримаєте квитки на Вашу пошту.
+        </p>
+        <button id="button-pay" class="button p" onclick="closePopup()">
+          Оплатити зараз
+        </button>
+      </div>
+      <p class="p ticket-end-p">
+        Після натиснення кнопки “Забронювати квитки” Ви отримаєте підтвердження
+        бронювання на вказану пошту. Опісля Ви можете оплатити квитки одразу або
+        протягом 24-х годин після підтвердження броні (за посиланням у листі з
+        підтвердженням). Коли оплата пройде успішно, електронний лист з квитками
+        прийде на Вашу пошту.
+      </p>
     </main>
     <footer class="footer">
-        <ul class="footer-col">
-            <li><a href="index.html" class="footer-item">Головна</a></li>
-            <li class="footer-col_ul-center"><a href="dragons.html" class="footer-item">Дракони</a></li>
-            <li><a href="reserve.html" class="footer-item">Про заповідник</a></li>
-        </ul>
-        <ul class="footer-col">
-            <li><a href="to-do.html" class="footer-item">Відвідування заповідника</a></li>
-            <li class="footer-col_ul-center"><a href="map.html" class="footer-item">Карта заповідника</a></li>
-            <li><a href="tickets.html" class="footer-item">Квитки</a></li>
-        </ul>
-        <div class="footer-title"><img src="img/icon/logo-footer.png" alt="logo-footer"></div>
+      <ul class="footer-col">
+        <li><a href="index.html" class="footer-item">Головна</a></li>
+        <li class="footer-col_ul-center">
+          <a href="dragons.html" class="footer-item">Дракони</a>
+        </li>
+        <li><a href="reserve.html" class="footer-item">Про заповідник</a></li>
+      </ul>
+      <ul class="footer-col">
+        <li>
+          <a href="to-do.html" class="footer-item">Відвідування заповідника</a>
+        </li>
+        <li class="footer-col_ul-center">
+          <a href="map.html" class="footer-item">Карта заповідника</a>
+        </li>
+        <li><a href="tickets.html" class="footer-item">Квитки</a></li>
+      </ul>
+      <div class="footer-title">
+        <img src="img/icon/logo-footer.png" alt="logo-footer" />
+      </div>
     </footer>
-</body>
+  </body>
 </html>

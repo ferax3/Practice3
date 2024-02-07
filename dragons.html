@@ -1,104 +1,191 @@
 <!DOCTYPE html>
 <html lang="ua">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--need to change title-->
     <!--ALT+Z - word wrap-->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <script src="js/dragons.js"></script>
-    <title>Dragons</title>
-</head>
-<body>
+    <!--іконки-->
+    <script src="https://use.fontawesome.com/08c46a2805.js"></script>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+
+    <title>DragonLand - Дракони</title>
+  </head>
+  <body>
     <header class="header">
-        <nav class="header_nav">
-            <ul class="nav-list">
-                <li><a href="index.html" class="nav-page">Головна</a></li>
-                <li><a href="dragons.html" class="nav-page green-light">Дракони</a></li>
-                <li><img src="img/icon/logo-header.png" alt="logo_header" class="nav-title"></li>
-                <li><a href="#" class="nav-page">Заповідник</a></li>
-                <li><a href="tickets.html" class="nav-page">Квитки</a></li>
+      <nav class="header_nav">
+        <input type="checkbox" id="check" />
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-page green-light">Головна</a></li>
+          <li><a href="dragons.html" class="nav-page">Дракони</a></li>
+          <li>
+            <img
+              src="img/icon/logo-header.png"
+              alt="logo_header"
+              class="nav-title"
+            />
+          </li>
+          <li>
+            <a href="#" class="nav-page">Заповідник</a>
+            <ul class="dropdown">
+              <li>
+                <a href="reserve.html" class="nav-page">Про заповідник</a>
+              </li>
+              <li>
+                <a href="to-do.html" class="nav-page"
+                  >Відвідування заповідника</a
+                >
+              </li>
+              <li><a href="map.html" class="nav-page">Карта заповідника</a></li>
             </ul>
-        </nav>
+          </li>
+          <li><a href="tickets.html" class="nav-page">Квитки</a></li>
+          <label for="check" class="close-menu"
+            ><i class="fa fa-times" aria-hidden="true"></i
+          ></label>
+        </ul>
+        <label for="check" class="open-menu"
+          ><i class="fa fa-bars" aria-hidden="true"></i
+        ></label>
+      </nav>
     </header>
     <main class="main">
-        <h1 class="title green-light h1">Дракони</h1>
-        <h3 class="subtitle h3">Тут перелічені найвідоміші породи драконів. У нашому заповіднику знаходяться лише деякі з них, адже вони потребують багато території та відповідних природніх умов.</h3>
-        <section class="gallery-dragons">
-            <div class="gallery-dragons-row">
-                <div class="gallery-one">
-                    <div class="Norwegian_ridgeback gallery-photo">
-                        <button class="button button-gallery" onclick="navigateToSecondPage()">Детальніше</button>                       
-                    </div>
-                    <h4 class="h4">Норвезький хребтоспин</h4>
-                </div>
-                <div class="gallery-one">
-                    <div class="Chinese_meteor gallery-photo">
-                        <button class="button button-gallery" onclick="navigateToSecondPage()">Детальніше</button>                       
-                    </div>
-                    <h4 class="h4">Китайська метеорка</h4>
-                </div>
-                <div class="gallery-one">
-                    <div class="Hebridean_black gallery-photo">
-                        <button class="button button-gallery" onclick="navigateToSecondPage()">Детальніше</button>                       
-                    </div>
-                    <h4 class="h4">Гебридій чорний</h4>
-                </div>
+      <h1 class="title green-light h1">Дракони</h1>
+      <h3 class="subtitle h3">
+        Тут перелічені найвідоміші породи драконів. У нашому заповіднику
+        знаходяться лише деякі з них, адже вони потребують багато території та
+        відповідних природніх умов.
+      </h3>
+      <section class="gallery-dragons">
+        <div class="gallery-dragons-row">
+          <div class="gallery-one">
+            <div class="Norwegian_ridgeback gallery-photo">
+              <button
+                class="button button-gallery"
+                onclick="navigateToSecondPage()"
+              >
+                Детальніше
+              </button>
             </div>
-            <div class="gallery-dragons-row">
-                <div class="gallery-one">
-                    <div class="ordinaty_green_roller gallery-photo">
-                        <button class="button button-gallery" onclick="navigateToSecondPage()">Детальніше</button>                       
-                    </div>
-                    <h4 class="h4">Звичайна зелена валійка</h4>
-                </div>
-                <div class="gallery-one">
-                    <div class="opalook_antipodes gallery-photo">
-                        <button class="button button-gallery" onclick="navigateToSecondPage()">Детальніше</button>                       
-                    </div>
-                    <h4 class="h4">Опалоок антиподібний</h4>
-                </div>
-                <div class="gallery-one">
-                    <div class="Swedish_short-wing gallery-photo">
-                        <button class="button button-gallery" onclick="navigateToSecondPage()">Детальніше</button>                       
-                    </div>
-                    <h4 class="h4">Шведський короткокрилка</h4>
-                </div>
+            <h4 class="h4">Норвезький хребтоспин</h4>
+          </div>
+          <div class="gallery-one">
+            <div class="Chinese_meteor gallery-photo">
+              <button
+                class="button button-gallery"
+                onclick="navigateToSecondPage()"
+              >
+                Детальніше
+              </button>
             </div>
-            <div class="gallery-dragons-row">
-                <div class="gallery-one">
-                    <div class="Romanian_dovgorih gallery-photo">
-                        <button class="button button-gallery" onclick="navigateToSecondPage()">Детальніше</button>                       
-                    </div>
-                    <h4 class="h4">Румунський довгоріг</h4>
-                </div>
-                <div class="gallery-one">
-                    <div class="Hungarian_hornbill gallery-photo">
-                        <button class="button button-gallery" onclick="navigateToSecondPage()">Детальніше</button>                       
-                    </div>
-                    <h4 class="h4">Угорська рогохвістка</h4>
-                </div>
-                <div class="gallery-one">
-                    <div class="Ukrainian_iron_belly gallery-photo">
-                        <button class="button button-gallery" onclick="navigateToSecondPage()">Детальніше</button>                       
-                    </div>
-                    <h4 class="h4">Український залізопуз</h4>
-                </div>
+            <h4 class="h4">Китайська метеорка</h4>
+          </div>
+          <div class="gallery-one">
+            <div class="Hebridean_black gallery-photo">
+              <button
+                class="button button-gallery"
+                onclick="navigateToSecondPage()"
+              >
+                Детальніше
+              </button>
             </div>
-        </section>
+            <h4 class="h4">Гебридій чорний</h4>
+          </div>
+        </div>
+        <div class="gallery-dragons-row">
+          <div class="gallery-one">
+            <div class="ordinaty_green_roller gallery-photo">
+              <button
+                class="button button-gallery"
+                onclick="navigateToSecondPage()"
+              >
+                Детальніше
+              </button>
+            </div>
+            <h4 class="h4">Звичайна зелена валійка</h4>
+          </div>
+          <div class="gallery-one">
+            <div class="opalook_antipodes gallery-photo">
+              <button
+                class="button button-gallery"
+                onclick="navigateToSecondPage()"
+              >
+                Детальніше
+              </button>
+            </div>
+            <h4 class="h4">Опалоок антиподібний</h4>
+          </div>
+          <div class="gallery-one">
+            <div class="Swedish_short-wing gallery-photo">
+              <button
+                class="button button-gallery"
+                onclick="navigateToSecondPage()"
+              >
+                Детальніше
+              </button>
+            </div>
+            <h4 class="h4">Шведський короткокрилка</h4>
+          </div>
+        </div>
+        <div class="gallery-dragons-row">
+          <div class="gallery-one">
+            <div class="Romanian_dovgorih gallery-photo">
+              <button
+                class="button button-gallery"
+                onclick="navigateToSecondPage()"
+              >
+                Детальніше
+              </button>
+            </div>
+            <h4 class="h4">Румунський довгоріг</h4>
+          </div>
+          <div class="gallery-one">
+            <div class="Hungarian_hornbill gallery-photo">
+              <button
+                class="button button-gallery"
+                onclick="navigateToSecondPage()"
+              >
+                Детальніше
+              </button>
+            </div>
+            <h4 class="h4">Угорська рогохвістка</h4>
+          </div>
+          <div class="gallery-one">
+            <div class="Ukrainian_iron_belly gallery-photo">
+              <button
+                class="button button-gallery"
+                onclick="navigateToSecondPage()"
+              >
+                Детальніше
+              </button>
+            </div>
+            <h4 class="h4">Український залізопуз</h4>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-        <ul class="footer-col">
-            <li><a href="index.html" class="footer-item">Головна</a></li>
-            <li class="footer-col_ul-center"><a href="dragons.html" class="footer-item">Дракони</a></li>
-            <li><a href="reserve.html" class="footer-item">Про заповідник</a></li>
-        </ul>
-        <ul class="footer-col">
-            <li><a href="to-do.html" class="footer-item">Відвідування заповідника</a></li>
-            <li class="footer-col_ul-center"><a href="map.html" class="footer-item">Карта заповідника</a></li>
-            <li><a href="tickets.html" class="footer-item">Квитки</a></li>
-        </ul>
-        <div class="footer-title"><img src="img/icon/logo-footer.png" alt="logo-footer"></div>
+      <ul class="footer-col">
+        <li><a href="index.html" class="footer-item">Головна</a></li>
+        <li class="footer-col_ul-center">
+          <a href="dragons.html" class="footer-item">Дракони</a>
+        </li>
+        <li><a href="reserve.html" class="footer-item">Про заповідник</a></li>
+      </ul>
+      <ul class="footer-col">
+        <li>
+          <a href="to-do.html" class="footer-item">Відвідування заповідника</a>
+        </li>
+        <li class="footer-col_ul-center">
+          <a href="map.html" class="footer-item">Карта заповідника</a>
+        </li>
+        <li><a href="tickets.html" class="footer-item">Квитки</a></li>
+      </ul>
+      <div class="footer-title">
+        <img src="img/icon/logo-footer.png" alt="logo-footer" />
+      </div>
     </footer>
-</body>
+  </body>
 </html>

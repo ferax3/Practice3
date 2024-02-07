@@ -1,48 +1,106 @@
 <!DOCTYPE html>
 <html lang="ua">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--need to change title-->
     <!--ALT+Z - word wrap-->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <script src="js/dragon.js"></script>
-    <title>Dragons</title>
-</head>
-<body>
+    <!--іконки-->
+    <script src="https://use.fontawesome.com/08c46a2805.js"></script>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+
+    <title>DragonLand - Дракони</title>
+  </head>
+  <body>
     <header class="header">
-        <nav class="header_nav">
-            <ul class="nav-list">
-                <li><a href="index.html" class="nav-page">Головна</a></li>
-                <li><a href="dragons.html" class="nav-page green-light">Дракони</a></li>
-                <li><img src="img/icon/logo-header.png" alt="logo_header" class="nav-title"></li>
-                <li><a href="#" class="nav-page">Заповідник</a></li>
-                <li><a href="tickets.html" class="nav-page">Квитки</a></li>
+      <nav class="header_nav">
+        <input type="checkbox" id="check" />
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-page green-light">Головна</a></li>
+          <li><a href="dragons.html" class="nav-page">Дракони</a></li>
+          <li>
+            <img
+              src="img/icon/logo-header.png"
+              alt="logo_header"
+              class="nav-title"
+            />
+          </li>
+          <li>
+            <a href="#" class="nav-page">Заповідник</a>
+            <ul class="dropdown">
+              <li>
+                <a href="reserve.html" class="nav-page">Про заповідник</a>
+              </li>
+              <li>
+                <a href="to-do.html" class="nav-page"
+                  >Відвідування заповідника</a
+                >
+              </li>
+              <li><a href="map.html" class="nav-page">Карта заповідника</a></li>
             </ul>
-        </nav>
+          </li>
+          <li><a href="tickets.html" class="nav-page">Квитки</a></li>
+          <label for="check" class="close-menu"
+            ><i class="fa fa-times" aria-hidden="true"></i
+          ></label>
+        </ul>
+        <label for="check" class="open-menu"
+          ><i class="fa fa-bars" aria-hidden="true"></i
+        ></label>
+      </nav>
     </header>
     <main class="main">
-        <img src="../img/дракони/норвезький.png" alt="dragon" class="dragon-img">
-        <section class="desc_dragon">
-            <h2 class="h2">Норвезький хребтоспин</h2>
-            <p class="desc_dragon-p p">Це один із найрідкісніших видів драконів, що вирізняється імпульсивним та доволі агресивним характером. У дикій природі вони нападають чи не на всіх крупних ссавців, а також водних мешканців (чого не роблять інші дракони). Норвезькі хребтоспини видихають потужне полум’я, а ця властивість починає проявлятися у віці від одного до трьох місяців.<br>
-            Дорослий Норвезький хребтоспин великий у розмірах і має рельєфні темно-сині гребені на спині. Він надає перевагу гірській місцевості поблизу води, переважно літає високо в хмарах та відпочиває в кам’янистих печерах. За ним можна спостерігати за полюванням біля річки або під час перепочинку.<br>
-            Звичайно, дракони що виросли у заповіднику менш небезпечні і не будуть нападати на людей, якщо поводитися спокійно та не виявляти агресії до них. Проте просимо вас бути обачними та не забувати, що гуляти територіями, де проживають дракони можна виключно з нашими навченими магами.</p>
-        <button id="button" class="button" onclick="navigateToDragonsPage()">Назад до драконів</button>
-        </section>
+      <img
+        src="../img/дракони/норвезький.png"
+        alt="dragon"
+        class="dragon-img"
+      />
+      <section class="desc_dragon">
+        <h2 class="h2">Норвезький хребтоспин</h2>
+        <p class="desc_dragon-p p">
+          Це один із найрідкісніших видів драконів, що вирізняється імпульсивним
+          та доволі агресивним характером. У дикій природі вони нападають чи не
+          на всіх крупних ссавців, а також водних мешканців (чого не роблять
+          інші дракони). Норвезькі хребтоспини видихають потужне полум’я, а ця
+          властивість починає проявлятися у віці від одного до трьох місяців.<br />
+          Дорослий Норвезький хребтоспин великий у розмірах і має рельєфні
+          темно-сині гребені на спині. Він надає перевагу гірській місцевості
+          поблизу води, переважно літає високо в хмарах та відпочиває в
+          кам’янистих печерах. За ним можна спостерігати за полюванням біля
+          річки або під час перепочинку.<br />
+          Звичайно, дракони що виросли у заповіднику менш небезпечні і не будуть
+          нападати на людей, якщо поводитися спокійно та не виявляти агресії до
+          них. Проте просимо вас бути обачними та не забувати, що гуляти
+          територіями, де проживають дракони можна виключно з нашими навченими
+          магами.
+        </p>
+        <button id="button" class="button" onclick="navigateToDragonsPage()">
+          Назад до драконів
+        </button>
+      </section>
     </main>
     <footer class="footer">
-        <ul class="footer-col">
-            <li><a href="index.html" class="footer-item">Головна</a></li>
-            <li class="footer-col_ul-center"><a href="dragons.html" class="footer-item">Дракони</a></li>
-            <li><a href="reserve.html" class="footer-item">Про заповідник</a></li>
-        </ul>
-        <ul class="footer-col">
-            <li><a href="to-do.html" class="footer-item">Відвідування заповідника</a></li>
-            <li class="footer-col_ul-center"><a href="map.html" class="footer-item">Карта заповідника</a></li>
-            <li><a href="tickets.html" class="footer-item">Квитки</a></li>
-        </ul>
-        <div class="footer-title"><img src="img/icon/logo-footer.png" alt="logo-footer"></div>
+      <ul class="footer-col">
+        <li><a href="index.html" class="footer-item">Головна</a></li>
+        <li class="footer-col_ul-center">
+          <a href="dragons.html" class="footer-item">Дракони</a>
+        </li>
+        <li><a href="reserve.html" class="footer-item">Про заповідник</a></li>
+      </ul>
+      <ul class="footer-col">
+        <li>
+          <a href="to-do.html" class="footer-item">Відвідування заповідника</a>
+        </li>
+        <li class="footer-col_ul-center">
+          <a href="map.html" class="footer-item">Карта заповідника</a>
+        </li>
+        <li><a href="tickets.html" class="footer-item">Квитки</a></li>
+      </ul>
+      <div class="footer-title">
+        <img src="img/icon/logo-footer.png" alt="logo-footer" />
+      </div>
     </footer>
-</body>
+  </body>
 </html>
