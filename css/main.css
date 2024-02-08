@@ -63,19 +63,26 @@
     text-align: center;
     padding: 2.78vw 0px;
 }
-.gallery-dragons{
+/* .gallery-dragons{
     display: flex;
     flex-direction: column;
     gap: 1.65vw 0px;
     color: white;
     font-family: "Kharkiv";
+} */
+.gallery-dragons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.65vw 0px;
+    color: white;
+    font-family: "Kharkiv";
 }
-.gallery-dragons-row{
+/* .gallery-dragons-row{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 1.32vw 0px;
-}
+} */
 .gallery-one{
     display: flex;
     flex-direction: column;

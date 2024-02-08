@@ -105,6 +105,7 @@ body{
     border-radius: 0.5291vw;
     transition: .5s ease;
     font-size: var(--font-size-h4);
+    color: white;
 }
 .button:hover{
     background-color: var(--red_dark);
