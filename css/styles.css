@@ -37,6 +37,7 @@ body{
 .fire-holovna-left1{
     top: 56vw;
     width: 37.5vw;
+    z-index: -1;
 }
 .fire-holovna-right1{
     top: 67vw;

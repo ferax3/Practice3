@@ -261,6 +261,9 @@
     border-color: var(--red); 
     border-width: 0.198vw;
 }
+.form-tickets {
+    padding-bottom: 2.78vw;
+}
 .form-title{
     padding: 2.778vw 0px;
 }
@@ -352,4 +355,26 @@
 }
 .container-popup-icon_close:active{
     background-color: var(--red);
+}
+
+/* !answer.html */
+.answer_ticket {
+    margin: 7.28vw 10.58vw 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Kharkiv";
+}
+
+.answer_ticket_p {
+    padding: 2.78vw 0px;
+}
+
+.buttons-answer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2.78vw;
 }

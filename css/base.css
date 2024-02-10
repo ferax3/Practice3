@@ -26,12 +26,3 @@
 
 
 
-@media(max-width: 650px) {
-    :root {    
-            --font-size-h1: 3.84vw;
-            --font-size-h2: 2.52vw;
-            --font-size-h3: 1.58vw;
-            --font-size-h4: 16px;
-            --font-size-p: 0.93vw;
-        }
-}

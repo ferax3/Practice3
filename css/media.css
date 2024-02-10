@@ -1,0 +1,394 @@
+.main-gallery{
+    padding-top: 70px;
+    width: 100%;
+}
+
+
+
+
+@media(max-width: 650px) {
+    :root {
+        --font-size-h1: 40px;
+        --font-size-h2: 20px;
+        --font-size-h3: 16px;
+        --font-size-h4: 16px;
+        --font-size-p: 12px;
+    }
+}
+
+@media(max-width: 650px) {
+    /*бургер меню*/
+    .zapovidnyk{
+        display: none;
+    }
+    .nav-list {
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--black);
+        width: 80%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        right: -100%;
+        transition: all 0.2s ease-in-out;
+    }
+
+    ul li {
+        padding: 3% 0;
+        text-align: center;
+        line-height: 2;
+    }
+
+    .nav-title {
+        position: absolute;
+        top: 20px;
+        right: 43%;
+        width: 96.02px;
+        height: 50px;
+    }
+
+    ul li ul.dropdown {
+        display: block;
+        position: relative;
+        padding: 0;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+    }
+
+    #check:checked~.nav-list {
+        right: 0;
+    }
+
+    /*те що зникає*/
+    .welcome, .fire-holovna-left2, .fire-holovna-right2, .reserve_img{
+        display: none;
+    }
+
+    /*вогонь*/
+    .fire-holovna-left1{
+        top: 684px!important;
+        width: 350px!important;
+        z-index: -1;
+    }
+    .fire-holovna-right1{
+        top: 1183px!important;
+        /*right: 0vw;*/
+        z-index: -1;
+        width: 340px!important;
+    }
+
+    /*головна*/
+    .main {
+        padding: 0px 20px;
+    }
+    .header_desc {
+        padding-top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 662px;
+        width: auto;
+    }
+    .header_desc-title {
+        font-family: "Wentrisor";
+        font-size: var(--font-size-h1);
+        padding-top: 115px;
+        width: 266px;
+        overflow-wrap: break-word;
+        font-size: 58px;
+    }
+
+    .header_desc-subtitle {
+        display: flex;
+        align-items: center;
+        font-family: "Kharkiv";
+        font-size: var(--font-size-h4);
+        width: auto;
+        padding: 222px 0 0;
+        border-style: none none solid none;
+        border-color: var(--red);
+        border-width: 2px;
+        text-align: center;
+        line-height: 1.5;
+
+    }
+    .about-left, .about-right{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-title{
+        word-break: break-word;
+        text-align: center;
+    }
+    .about-left{
+        padding: 100px 0px 0px;
+    }
+    .about-right{
+        padding: 60px 0px 0px;
+    }
+    .about-desc {
+        width: auto;
+        padding-top: 24px;
+    }
+    .about_p {
+        padding: 24px 0px;
+    }
+
+    .button {
+        padding: 16px 30px !important;
+        border-width: 1px !important;
+        border-radius: 8px !important;
+    }
+    .subtitle{
+        padding: 24px 0;
+    }
+    .title{
+    padding-top: 80px;
+    }
+    /*дракони*/
+    .gallery-dragons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 20px;
+    }
+    .gallery-one {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0px;
+    }
+
+    .gallery-photo {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        transition: .5s ease;
+    }
+    .dragon-img {
+        height: 400px;
+        padding-top: 67px;
+        object-fit: cover;
+        object-position: top;
+        /* Обрізати з верхньої частини зображення */
+    }
+
+    .desc_dragon {
+        color: white;
+        font-family: "Kharkiv";
+        padding-top: 40px;
+    }
+
+    .desc_dragon-p {
+        line-height: 1.3;
+        padding: 24px 0px;
+    }
+    /*відвідування заповідника*/
+    .reserve-title {
+        margin-top: 67px;
+        padding: 20px 0px;
+    }
+    .reserve{
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .reserve-desc {
+        width: 100%;
+    }
+    .reserve-tick {
+        width: 7px;
+        height: 15px;
+    }
+    .reserve-desc-title {
+        column-gap: 10px;
+    }
+    .reserve-desc-title_p {
+        padding: 20px 0px;
+    }
+    .reserve-desk_button {
+        flex-direction: column;
+        gap: 20px;
+    }
+    /*карта*/
+    .img_map {
+        margin-top: 40px;
+        width: 100%;
+        height: 290px;
+        object-fit: cover;
+    }
+    .map-title {
+        margin-top: 67px;
+        padding: 20px 0px;
+    }
+    .fire-map-left, .fire-map-right{
+        top: 177px !important;
+        width: 63px !important;
+    }
+    .fire-map-left {
+        left: 0 !important;
+    }
+
+    .fire-map-right {
+        right: 0 !important;
+    }
+
+    .legend {
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+    }
+
+    .legend-items {
+        font-family: "Kharkiv";
+        color: white;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr 5fr);
+        align-items: center;
+        gap: 10px 20px;
+    }
+    /*Відвідування заповідника*/
+    .fire-to_do_center {
+        top: 503px !important;
+        left: 0 !important;
+        width: 360px !important;
+    }
+
+    .fire-to_do_right {
+        top: 1371px !important;
+        right: 0 !important;
+        width: 360px !important;
+    }
+    .doing-main-title1 {
+        margin-top: 87px;
+    }
+    .doing-main {
+        margin-top: 24px;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 0;
+        row-gap: 20px;
+    }
+    .img-icon-doing {
+        width: 65px;
+        height: 54px;
+    }
+
+    .doing-title {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .doing-main-title2 {
+        margin: 40px 0px;
+    }
+    .price {
+        padding: 40px 0px 24px;
+        border-color: var(--red);
+        border-width: 3px;
+    }
+
+    .price-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px 40px;
+    }
+
+    .price-main_h4 {
+        padding: 0px 0px 10px;
+    }
+
+    .attention {
+        padding: 40px 0px 0px;
+        color: var(--red);
+    }
+    /*Квитки*/
+    .fire-tickets-left {
+        top: 47px !important;
+        width: 255px !important;
+    }
+
+    .fire-tickets-right {
+        top: 128px !important;
+        width: 300px !important;
+    }
+
+    .fire-tickets-center {
+        top: 567px !important;
+        left: 0 !important;
+        width: 100% !important;
+    }
+    .ticket-start {
+        margin-top: 87px;
+    }
+
+    .ticket-start_h3 {
+        padding: 40px 0;
+        line-height: 1.3;
+    }
+
+    .form {
+        border-width: 2px;
+    }
+
+    .form-tickets {
+        padding-bottom: 40px;
+    }
+
+    .form-title {
+        padding-top: 40px;
+        padding-bottom: 24px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 24px;
+        padding-bottom: 0;
+    }
+
+    .form-item {
+        border-width: 2px;
+        padding: 10px;
+    }
+
+    .form-item-all {
+        width: 85%;
+    }
+    .form-time {
+        width: 30%;
+        margin-bottom: 40px;
+    }
+    .ticket-end-p {
+        color: white;
+        margin: 40px 0px 0px;
+    }
+
+    /*answer*/
+    .answer_ticket {
+        margin: 87px 0 0;
+    }
+
+    .answer_ticket_p {
+        padding: 24px 0px;
+    }
+
+    .buttons-answer {
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 300px;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 435px) {
+    .button {
+            font-size: 12px !important;
+        }
+    .gallery-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
