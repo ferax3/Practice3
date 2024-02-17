@@ -1,10 +1,9 @@
-.main-gallery{
-    padding-top: 70px;
-    width: 100%;
+@media (max-width: 1000px) {
+    #grid{
+        display: none;
+    }
+    
 }
-
-
-
 
 @media(max-width: 650px) {
     :root {
@@ -64,7 +63,7 @@
     }
 
     /*те що зникає*/
-    .welcome, .fire-holovna-left2, .fire-holovna-right2, .reserve_img{
+    .welcome, .fire-holovna-left2, .fire-holovna-right2, .reserve_img, #grid{
         display: none;
     }
 

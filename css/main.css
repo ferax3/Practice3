@@ -63,6 +63,108 @@
     text-align: center;
     padding: 2.78vw 0px;
 }
+
+/*grid галерея слайдер*/
+#grid {
+    padding-top: 70px;
+    height: 90vh;
+    transition: 500ms;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0;
+}
+
+.gallery-pic{
+    transition: 500ms;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;display: flex;
+    flex-direction: column;
+    gap: 22px;
+    align-items: center;
+}
+
+.gallery-pic-icon{
+    padding-top: 40vh;
+    width: 10vh;
+}
+.gallery-pic-text{
+    text-align: center;
+    font-family: "Kharkiv";
+    color: #fff;
+    opacity: 0;
+    /* Додайте opacity: 0; для визначення початкового стану */
+    transition: opacity 0.5s ease;
+    /* Встановіть час та функцію анімації за бажанням */
+}
+.gallery-pic:hover .gallery-pic-text {
+    opacity: 1;
+}
+
+:where(.pic-1) {
+    background-image: url("../img/gallery/park.png");
+    transition: 300ms;
+}
+:where(.pic-2) {
+    background-image: url("../img/gallery/mountain.png");
+    transition: 300ms;
+}
+:where(.pic-3) {
+    background-image: url("../img/gallery/nature.png");
+    transition: 300ms;
+}
+:where(.pic-4) {
+    background-image: url("../img/gallery/dragon_fly.png");
+    transition: 300ms;
+}
+:where(.pic-5) {
+    background-image: url("../img/gallery/baby.png");
+    transition: 300ms;
+}
+:where(.pic-6) {
+    background-image: url("../img/gallery/shop.png");
+    transition: 300ms;
+}
+
+:where(.pic-1):hover {
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/gallery/park.png");
+}
+:where(.pic-2):hover {
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/gallery/mountain.png");
+}
+:where(.pic-3):hover {
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/gallery/nature.png");
+}
+:where(.pic-4):hover {
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/gallery/dragon_fly.png");
+}
+:where(.pic-5):hover {
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/gallery/baby.png");
+}
+:where(.pic-6):hover {
+    background-image: linear-gradient(rgba(25, 27, 25, 0.5), rgba(25, 27, 25, 0.5)), url("../img/gallery/shop.png");
+}
+
+
+#grid:has(.pic-1:hover) {
+    grid-template-columns: 0.8fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+#grid:has(.pic-2:hover) {
+    grid-template-columns: 0.5fr 0.8fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+#grid:has(.pic-3:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.8fr 0.5fr 0.5fr 0.5fr;
+}
+#grid:has(.pic-4:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.8fr 0.5fr 0.5fr;
+}
+#grid:has(.pic-5:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.8fr 0.5fr;
+}
+#grid:has(.pic-6:hover) {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.8fr;
+}
+
 /* .gallery-dragons{
     display: flex;
     flex-direction: column;
